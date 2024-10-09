@@ -96,16 +96,14 @@ let projCollection = [
     "itemTitle": "Fullourish",
     "category": "Web Dev",
     "id": "1",
-    "bio": "Description for Project 1",
     "image": "fullourish.png",
     "language": "HTML/CSS"
   },
 
   {
     "itemTitle": "Cache Simulator",
-    "category": "Computer Architecture",
+    "category": "Data Analysis",
     "id": "2",
-    "bio": "Description for Project 2",
     "image": "simcache.png",
     "language": "C++"
   },
@@ -113,7 +111,6 @@ let projCollection = [
     "itemTitle": "405 Stuck in Cyberspace",
     "category": "Creative",
     "id": "3",
-    "bio": "Description for Project 3",
     "image": "cyberspace.png",
     "language": "P5JS"
   },
@@ -121,7 +118,6 @@ let projCollection = [
     "itemTitle": "Carrot Catcher",
     "category": "Game Dev",
     "id": "7",
-    "bio": "Description for Project 1",
     "image": "carrotcatcher.png",
     "language": "GML"
   },
@@ -129,7 +125,6 @@ let projCollection = [
     "itemTitle": "Interactive STEM Mural",
     "category": "Creative",
     "id": "7",
-    "bio": "Description for Project 1",
     "image": "mural.jpeg",
     "language": "C"
   },
@@ -137,7 +132,6 @@ let projCollection = [
     "itemTitle": "CatCam",
     "category": "Mobile Dev",
     "id": "4",
-    "bio": "Description for Project 3",
     "image": "catcam.png",
     "language": "Swift"
   },
@@ -145,7 +139,6 @@ let projCollection = [
     "itemTitle": "iAct",
     "category": "Mobile Dev",
     "id": "5",
-    "bio": "Description for Project 3",
     "image": "iAct.png",
     "language": "Swift"
   },
@@ -153,26 +146,65 @@ let projCollection = [
     "itemTitle": "TandonStudy",
     "category": "Web Dev",
     "id": "6",
-    "bio": "Description for Project 1",
     "image": "tandonstudy.png",
     "language": "HTML/CSS"
   },
   {
-    "itemTitle": "Breyers Redesign Pitch",
-    "category": "Graphic Design",
-    "id": "6",
-    "bio": "Description for Project 1",
-    "image": "breyers.png",
-    "language": "Adobe Suite"
+    "itemTitle": "Tic-Tac-Toe Game",
+    "category": "Data Analysis",
+    "id": "7",
+    "image": "tic_tac_toe.png",
+    "language": "R"
   },
   {
-    "itemTitle": "Panier Cadeau 2023 Magezine",
-    "category": "Graphic Design",
-    "id": "6",
-    "bio": "Description for Project 1",
-    "image": "magezine.png",
-    "language": "Adobe Suite"
+    "itemTitle": "Galton Board Simulation",
+    "category": "Data Analysis",
+    "id": "8",
+    "image": "galton_board.jpg",
+    "language": "R"
   },
+  {
+    "itemTitle": "Number Line ML Model",
+    "category": "Data Analysis",
+    "id": "9",
+    "image": "number_line.jpg",
+    "language": "R"
+  },
+  {
+    "itemTitle": "Inverse Probability Weighting, Sensitivity Analysis",
+    "category": "Data Analysis",
+    "id": "10",
+    "image": "sensitivity_analysis.png",
+    "language": "R"
+  },
+  {
+    "itemTitle": "Audio Synthesizer and Reactive Visualizer",
+    "category": "Creative",
+    "id": "11",
+    "image": "audio_vis.jpg",
+    "language": "Max"
+  },
+  {
+    "itemTitle": "Breakout Game",
+    "category": "Game Dev",
+    "id": "12",
+    "image": "breakout.jpg",
+    "language": "p5js"
+  },
+  {
+    "itemTitle": "FruitDrop Game",
+    "category": "Game Dev",
+    "id": "13",
+    "image": "fruitdrop.jpg",
+    "language": "p5js"
+  },
+  {
+    "itemTitle": "Motivational Bookshelf",
+    "category": "Creative",
+    "id": "14",
+    "image": "bookshelf.png",
+    "language": "Arduino"
+  }
 ];
 
 function filterSelection(category) {
@@ -203,12 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-  } else {
-    for (let i = 0; i < projCollection.length; i++) {
-      if (projCollection[i]["id"] == urlID) {
-        createProjectPage(projCollection[i]);
-      }
-    }
   }
 
   document.querySelector(".btn.active").addEventListener("click", function () {
@@ -241,22 +267,3 @@ function createProjectPreview(incomingJSON) {
   outputGridElement.appendChild(newPreviewLink);
 }
 
-function createProjectPage(incomingJSON) {
-  projTitleElement.innerText = incomingJSON["itemTitle"];
-
-  let newProjectElement = document.createElement("DIV");
-
-  if (incomingJSON["bio"]) {
-    let newProjectLink = document.createElement("A");
-    newProjectLink.href = incomingJSON["bio"];
-    newProjectLink.innerText = "Bio";
-    newProjectElement.appendChild(newProjectLink);
-  }
-
-  let newProjectImage = document.createElement("IMG");
-  newProjectImage.classList.add("projectHeroImage");
-  newProjectImage.src = incomingJSON["image"];
-  newProjectElement.appendChild(newProjectImage);
-
-  projectDisplayElement.appendChild(newProjectElement);
-}
