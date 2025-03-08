@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sanjida Orpi</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<link href="https://fonts.cdnfonts.com/css/facebook-letter-faces" rel="stylesheet">
+
+	<link href="https://www.dafontfree.net/embed/ZmFjZWJvb2stbGV0dGVyLWZhY2VzLXJlZ3VsYXImZGF0YS80Mi9mLzkxNTU2L0ZBQ0VCT0xGLk9URg" rel="stylesheet" type="text/css"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
+    
+	<script src="sketch.js"></script>
+</head>
+
+<body>
+
+	<div class="cursor">
+
+		<script>
+			const cursor = document.querySelector('.cursor');
+
+			document.addEventListener('mousemove', e => {cursor.setAttribute("style", "top: "+e.pageY+"px; left: "+e.pageX+"px;")
+			})
+
+		</script>
+		
+	</div>
+
+  <div class="container">
+    <nav class="myNav">
+      <ul>
+        <img class="logo" src="images/logos.png">
+        <div class="right-header">
+          	<li><a href="index.html">About</a></li>
+          	<li><a href="projects.html">Projects</a></li>
+          	<!-- <li><a href="experience.html">Experience</a></li> -->
+        </div>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+    	<div id="canvas-container">
+      		<div id="p5Canvas"></div>
+      	</div>
+
+      <div class="name">
+        <p>SANJIDA ORPI //</p>
+      </div>
+
+      <div class="headshot">
+        <div class="description">
+        	<p>SOFTWARE ENGINEER //</p>
+        	<p>		DEVELOPER //</p>
+        	<p>		DESIGNER //</p>
+        </div>
+        <img class="image" src="images/headshot.jpg">
+      </div> <!-- End of headshot -->
+
+    </div> <!-- End of wrapper -->
+
+
+    <div class="about">
+    	<p>I'm a fourth year computer science student at NYU, with a knack for developing intuitive solutions
+			 through thoughtful design and creative technologies. Whether it's optimizing machine learning
+			  algorithms, mentoring the next generation of developers, or creating interactive human-computer experiences,
+			   I strive to craft digital tools that are accessible, functional, and human centered. Let's build something remarkable together!
+		</p>
+    </div>
+
+	
+	<footer>
+		<div>
+			<p class="about" style="text-align: center;">
+				Thank you for visiting my page ❤️ Let's connect!
+			</p>
+		</div>
+		<div id="connect_button">
+			<button class="btn" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+			<button class="btn" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+			<button class="btn" onclick="window.open('https://drive.google.com/file/d/1YfbXLfLcVh7AAJlX2NvMvBmkGX8Fzg7-/view?usp=sharing', '_blank')">Resume</button>
+		</div>
+		<div>
+			<p class="foot" style="text-align: center;">
+				© 2025 Sanjida Orpi - All Rights Reserved 
+			</p>
+		</div>
+	</footer>
+	
+  </div> <!-- End of container -->
+
+</body>
+
+</html>
