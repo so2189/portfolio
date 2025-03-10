@@ -8,9 +8,9 @@
 }
 
 .container {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 0;
 }
 
 .wrapper {
@@ -66,11 +66,13 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   cursor: url("cursor.png"), auto;
   background-color: transparent;
   font-family: 'facebook-letter-faces-regular', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 h1 {
@@ -111,6 +113,7 @@ h1 {
   font-size: min(2vw, 10em);
   margin-left: 15%;
   margin-right: 15%;
+  margin-bottom: 5%;
   font-family: 'facebook-letter-faces-regular', sans-serif;
   font-family: 'facebook-letter-faces-regular', sans-serif;
 }
@@ -140,6 +143,7 @@ h1 {
   margin-right: 5%;
   margin-left: 5%;
 }
+
 
 .project p {
   margin-top: 10%;
@@ -172,14 +176,16 @@ h1 {
   font-family: 'Fraunces', serif;
   margin-top: 4%;
   margin-bottom: 15%;
+  padding-bottom: 15%;
 }
 
 #outputGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr)); /* Adjust grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
   gap: 3%;
   margin-bottom: 5vw;
 }
+
 
 #outputGrid>a, #outputGrid>a:visited {
   color: #000;
@@ -215,13 +221,9 @@ h1 {
 }
 
 footer {
+  margin-top: auto;
   padding: 1%;
-  margin-top: 5%;
   background-color: #f1f1f1;
   font-family: 'Quicksand', sans-serif;
   width: 100%;
-}
-
-foot {
-  margin-top: 15%;
 }
