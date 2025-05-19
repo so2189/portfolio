@@ -20,6 +20,14 @@ let projCollection = [
     "language": "PostgreSQL, Python, JS"
   },
 
+    {
+    "itemTitle": "Java Kahoot",
+    "category": "Fulstack",
+    "id": "23",
+    "image": "images/simcache.png",
+    "language": "Java"
+  },
+
   {
     "itemTitle": "Fullourish",
     "category": "Fullstack",
@@ -27,6 +35,7 @@ let projCollection = [
     "image": "images/fullourish.png",
     "language": "API, JS, HTML/CSS"
   },
+
 
   {
     "itemTitle": "Cache Simulator",

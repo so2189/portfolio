@@ -37,6 +37,8 @@ function makeEllipse() {
     velocity: { x: random(-1, 1), y: random(-1, 1) },
     diameter: diameter,
     fillColor: color(random(150, 250), random(150, 210), random(150, 220), 0.3),
+    rotation: random(TWO_PI),
+    rotationSpeed: random(-0.01, 0.01),
     move: move,
     draw: drawEllipse,
     checkBounds: checkBounds,
@@ -45,12 +47,18 @@ function makeEllipse() {
 
 function drawEllipse() {
   fill(this.fillColor);
-  star(this.position.x, this.position.y, 60, 15, 100);
+  let radius = 45;
+  push();
+  translate(this.position.x, this.position.y);
+  rotate(this.rotation);
+  lotus(0, 0, radius);
+  pop();
 }
 
 function move() {
   this.position.x += this.velocity.x;
   this.position.y += this.velocity.y;
+  this.rotation += this.rotationSpeed;
 }
 
 function checkBounds() {
@@ -69,7 +77,6 @@ function checkBounds() {
   }
 }
 
-
 function star(x, y, radius1, radius2, npoints) {
   let angle = TWO_PI / npoints;
   let halfAngle = angle / 2.0;
@@ -85,185 +92,14 @@ function star(x, y, radius1, radius2, npoints) {
   endShape(CLOSE);
 }
 
-
-
-let projTitleElement;
-let outputGridElement;
-let projectDisplayElement;
-
-let projCollection = [
-  {
-    "itemTitle": "Fullourish",
-    "category": "Web Dev",
-    "id": "1",
-    "image": "fullourish.png",
-    "language": "HTML/CSS"
-  },
-
-  {
-    "itemTitle": "Cache Simulator",
-    "category": "Data Analysis",
-    "id": "2",
-    "image": "simcache.png",
-    "language": "C++"
-  },
-  {
-    "itemTitle": "405 Stuck in Cyberspace",
-    "category": "Creative",
-    "id": "3",
-    "image": "cyberspace.png",
-    "language": "P5JS"
-  },
-  {
-    "itemTitle": "Carrot Catcher",
-    "category": "Game Dev",
-    "id": "7",
-    "image": "carrotcatcher.png",
-    "language": "GML"
-  },
-  {
-    "itemTitle": "Interactive STEM Mural",
-    "category": "Creative",
-    "id": "7",
-    "image": "mural.jpeg",
-    "language": "C"
-  },
-  {
-    "itemTitle": "CatCam",
-    "category": "Mobile Dev",
-    "id": "4",
-    "image": "catcam.png",
-    "language": "Swift"
-  },
-  {
-    "itemTitle": "iAct",
-    "category": "Mobile Dev",
-    "id": "5",
-    "image": "iAct.png",
-    "language": "Swift"
-  },
-  {
-    "itemTitle": "TandonStudy",
-    "category": "Web Dev",
-    "id": "6",
-    "image": "tandonstudy.png",
-    "language": "HTML/CSS"
-  },
-  {
-    "itemTitle": "Tic-Tac-Toe Game",
-    "category": "Data Analysis",
-    "id": "7",
-    "image": "tic_tac_toe.png",
-    "language": "R"
-  },
-  {
-    "itemTitle": "Galton Board Simulation",
-    "category": "Data Analysis",
-    "id": "8",
-    "image": "galton_board.jpg",
-    "language": "R"
-  },
-  {
-    "itemTitle": "Number Line ML Model",
-    "category": "Data Analysis",
-    "id": "9",
-    "image": "number_line.jpg",
-    "language": "R"
-  },
-  {
-    "itemTitle": "Inverse Probability Weighting, Sensitivity Analysis",
-    "category": "Data Analysis",
-    "id": "10",
-    "image": "sensitivity_analysis.png",
-    "language": "R"
-  },
-  {
-    "itemTitle": "Audio Synthesizer and Reactive Visualizer",
-    "category": "Creative",
-    "id": "11",
-    "image": "audio_vis.jpg",
-    "language": "Max"
-  },
-  {
-    "itemTitle": "Breakout Game",
-    "category": "Game Dev",
-    "id": "12",
-    "image": "breakout.jpg",
-    "language": "p5js"
-  },
-  {
-    "itemTitle": "FruitDrop Game",
-    "category": "Game Dev",
-    "id": "13",
-    "image": "fruitdrop.jpg",
-    "language": "p5js"
-  },
-  {
-    "itemTitle": "Motivational Bookshelf",
-    "category": "Creative",
-    "id": "14",
-    "image": "bookshelf.png",
-    "language": "Arduino"
-  }
-];
-
-function filterSelection(category) {
-  outputGridElement.innerHTML = "";
-
-  for (let i = 0; i < projCollection.length; i++) {
-    if (category === 'all' || projCollection[i]["category"] === category) {
-      createProjectPreview(projCollection[i]);
-    }
-  }
+function lotus(x, y, r) {
+  beginShape();
+  curveVertex(x, y);
+  curveVertex(x, y - r * 0.2);
+  curveVertex(x + r * 0.4, y - r);
+  curveVertex(x, y - r * 2);
+  curveVertex(x - r * 0.4, y - r);
+  curveVertex(x, y - r * 0.2);
+  curveVertex(x, y);
+  endShape();
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  projTitleElement = document.getElementById("pageTitle");
-  outputGridElement = document.getElementById("outputGrid");
-  projectDisplayElement = document.getElementById("projectDisplay");
-
-  let queryString = window.location.search;
-  let urlParams = new URLSearchParams(queryString);
-  let urlSection = urlParams.get('section');
-  let urlID = urlParams.get('id');
-
-  if (urlSection != "item") {
-
-    for (let i = 0; i < projCollection.length; i++) {
-      if (projCollection[i]["category"] == urlSection || urlSection == "" || urlSection == null) {
-        createProjectPreview(projCollection[i]);
-      }
-    }
-
-  }
-
-  document.querySelector(".btn.active").addEventListener("click", function () {
-    filterSelection('all', 'all');
-  });
-});
-
-function createProjectPreview(incomingJSON) {
-  let newPreviewLink = document.createElement("A");
-  newPreviewLink.href = incomingJSON["bio"];
-
-  let newPreviewElement = document.createElement("DIV");
-  newPreviewLink.appendChild(newPreviewElement);
-
-  let newPreviewThumbnail = document.createElement("IMG");
-  newPreviewThumbnail.classList.add("thumbnail");
-  newPreviewThumbnail.src = incomingJSON["image"];
-  newPreviewElement.appendChild(newPreviewThumbnail);
-
-  let newPreviewTitle = document.createElement("P");
-  newPreviewTitle.classList.add("previewTitle");
-  newPreviewTitle.innerText = incomingJSON["itemTitle"];
-  newPreviewElement.appendChild(newPreviewTitle);
-
-  let newPreviewData = document.createElement("DATA");
-  newPreviewData.classList.add("previewData");
-  newPreviewData.innerText = incomingJSON["language"];
-  newPreviewElement.appendChild(newPreviewData);
-
-  outputGridElement.appendChild(newPreviewLink);
-}
-
