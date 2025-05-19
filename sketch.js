@@ -1,5 +1,5 @@
 let ellipses = [];
-let count = 8;
+let count = 10;
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
@@ -51,7 +51,7 @@ function drawEllipse() {
   push();
   translate(this.position.x, this.position.y);
   rotate(this.rotation);
-  lotus(0, 0, radius);
+  petal(0, 0, radius);
   pop();
 }
 
@@ -92,7 +92,7 @@ function star(x, y, radius1, radius2, npoints) {
   endShape(CLOSE);
 }
 
-function lotus(x, y, r) {
+function petal(x, y, r) {
   beginShape();
   curveVertex(x, y);
   curveVertex(x, y - r * 0.2);
