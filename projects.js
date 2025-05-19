@@ -6,39 +6,39 @@ let projCollection = [
 
   {
     "itemTitle": "Fantasy Sports Database",
-    "category": "Back End",
+    "category": "Fullstack",
     "id": "1",
     "image": "images/fantasy.png",
     "language": "SQL, PHP, HTML/CSS"
   },
 
   {
-    "itemTitle": "Cache Simulator",
-    "category": "Back End",
+    "itemTitle": "Winfra",
+    "category": "Fullstack",
     "id": "2",
-    "image": "images/simcache.png",
-    "language": "C++"
+    "image": "images/winfra.png",
+    "language": "PostgreSQL, Python, JS"
   },
 
   {
     "itemTitle": "Fullourish",
-    "category": "Web Dev",
+    "category": "Fullstack",
     "id": "3",
     "image": "images/fullourish.png",
     "language": "API, JS, HTML/CSS"
   },
 
   {
-    "itemTitle": "Paw Pals",
-    "category": "Game Dev",
+    "itemTitle": "Cache Simulator",
+    "category": "Data",
     "id": "4",
-    "image": "images/pawpals.png",
-    "language": "GML"
+    "image": "images/simcache.png",
+    "language": "C++"
   },
 
   {
     "itemTitle": "Inverse Probability Weighting, Sensitivity Analysis",
-    "category": "Data Analysis",
+    "category": "Data",
     "id": "5",
     "image": "images/sensitivity_analysis.png",
     "language": "R"
@@ -78,7 +78,7 @@ let projCollection = [
 
   {
     "itemTitle": "TandonStudy",
-    "category": "Web Dev",
+    "category": "Fullstack",
     "id": "10",
     "image": "images/tandonstudy.png",
     "language": "HTML/CSS"
@@ -86,7 +86,7 @@ let projCollection = [
 
   {
     "itemTitle": "Tic-Tac-Toe Game",
-    "category": "Data Analysis",
+    "category": "Data",
     "id": "11",
     "image": "images/tic_tac_toe.png",
     "language": "R"
@@ -94,7 +94,7 @@ let projCollection = [
 
   {
     "itemTitle": "Galton Board Simulation",
-    "category": "Data Analysis",
+    "category": "Data",
     "id": "12",
     "image": "images/galton_board.jpg",
     "language": "R"
@@ -102,7 +102,7 @@ let projCollection = [
   
   {
     "itemTitle": "Number Line ML Model",
-    "category": "Data Analysis",
+    "category": "Data",
     "id": "13",
     "image": "images/number_line.jpg",
     "language": "R"
@@ -170,6 +170,14 @@ let projCollection = [
     "id": "21",
     "image": "images/mural.jpeg",
     "language": "C"
+  },
+
+  {
+    "itemTitle": "Paw Pals",
+    "category": "Game Dev",
+    "id": "22",
+    "image": "images/pawpals.png",
+    "language": "GML"
   }
 
 ];

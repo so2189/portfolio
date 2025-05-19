@@ -26,7 +26,7 @@
 
 .myNav {
   display: block;
-  height: 5vw;
+  height: 1vw;
   line-height: 5vw;
   z-index: 5;
 }
@@ -83,10 +83,10 @@ h1 {
 
 .name p {
   margin-top: 3%;
-  margin-bottom: 4%;
+  margin-bottom: 1%;
   margin-left: 2%;
-  font-size: 8vw;
-  font-size: min(8vw, 10em);
+  font-size: 5vw;
+  font-size: min(5vw, 10em);
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -128,8 +128,9 @@ h1 {
 
 .headshot img {
   width: 40%;
-  height: 40%;
-  border-radius: 4px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 #p5Canvas {
