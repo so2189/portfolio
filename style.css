@@ -1,3 +1,13 @@
+@font-face {
+  font-family: headerFont;
+  src: url(fonts/Pencerio_Complete/Fonts/OTF/Pencerio-Hairline.otf);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf);
+}
+
 #canvas-container {
   position: fixed;
   top: 0;
@@ -16,61 +26,57 @@
 .wrapper {
   position: relative;
   z-index: 1;
-  margin: 5%;
 }
 
-.logo {
-  margin-left: 5%;
-  width: 7%;
-  margin-top: 1%;
-  z-index: 1;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 3%;
+  height: 70px;
+  position: relative;
 }
 
-.myNav {
-  display: block;
-  height: 1vw;
-  line-height: 5vw;
-  z-index: 5;
+.navbar .name {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.left-header {
-  float: left;
-  margin-left: 5%;
+.navbar .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
 }
 
-.right-header {
-  float: right;
-  margin-right: 5%;
-}
-
-.myNav ul {
+.links {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  z-index: 100;
 }
 
-.myNav li {
-  display: inline-block;
-}
-
-.myNav li a {
-  color: black;
-  font-family: 'Quicksand', sans-serif;
+.links a {
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  padding: 2vw 2.5vw;
-  font-size: min(2vw, 1em);
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
-.myNav li a:hover {
-  text-decoration: underline;
+.links a:hover {
+  background-color: rgb(190, 221, 248);
+  border-radius: 18%;
 }
 
 body {
   cursor: url("cursor.png"), auto;
   background-color: transparent;
-  font-family: 'facebook-letter-faces-regular', sans-serif;
+  font-family: 'font2';
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -78,46 +84,57 @@ body {
 }
 
 h1 {
-  padding: 2vw 2.5vw;
   font-size: 16vh;
   font-size: min(12vw, 1em);
 }
 
-.name p {
-  margin-top: 5%;
-  margin-bottom: 1%;
-  margin-left: 2%;
-  font-size: 5vw;
-  font-size: min(5vw, 10em);
-  font-family: 'Quicksand', sans-serif;
+.name {
+  font-family: 'headerFont', sans-serif;
 }
 
-.headshot {
+.header {
+  margin-left: 3%;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 40px;
+  flex-wrap: nowrap;
+}
+
+#pre-header {
+  text-align: center;
+  font-size: min(4vw, 6vh);
+}
+
+#description {
+  font-size: min(10vw, 16vh);
+  width: 60%;
+  min-width: 0;
+  margin-right: 5%;
+}
+
+#vertical-columns {
   display: flex;
   flex-direction: row;
+  gap: 100%;
+  flex-shrink: 0;
 }
 
-.description {
-  margin-top: 0;
-  margin-bottom: 12%;
-  margin-left: 2%;
-  margin-left: 2%;
-  font-size: min(3vw, 10em);
-  width: 50%;
-  text-align: left;
-  text-align: left;
+.column {
+  display: flex;
+  flex-direction: column;
+  font-size: min(3vw, 5vw);
 }
 
-.about {
-  text-align: left;
-  font-size: min(2vw, 10em);
-  text-align: left;
-  font-size: min(2vw, 10em);
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 5%;
-  font-family: 'facebook-letter-faces-regular', sans-serif;
-  font-family: 'facebook-letter-faces-regular', sans-serif;
+.header span {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .image {
@@ -126,14 +143,6 @@ h1 {
   text-align: center;
   display: flex;
   align-content: center;
-}
-
-.headshot img {
-  width: 40%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  z-index: 10;
 }
 
 #p5Canvas {
@@ -150,9 +159,8 @@ h1 {
 
 
 .project p {
-  margin-top: 10%;
   font-size: min(5vw, 10em);
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'font2', sans-serif;
 }
 
 .myBtnContainer {
@@ -160,7 +168,7 @@ h1 {
 }
 
 .btn {
-  font-family: 'Fraunces', serif;
+  font-family: 'font2', serif;
   border-width: 1px;
   border-radius: 2%;
   padding: 1.5vh;
@@ -177,7 +185,7 @@ h1 {
 }
 
 .gridLayout {
-  font-family: 'Fraunces', serif;
+  font-family: 'font2', serif;
   margin-top: 4%;
   margin-bottom: 15%;
   padding-bottom: 15%;
@@ -189,7 +197,6 @@ h1 {
   gap: 3%;
   margin-bottom: 5vw;
 }
-
 
 #outputGrid>a, #outputGrid>a:visited {
   color: #000;
@@ -218,17 +225,81 @@ h1 {
 #connect_button {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   gap: 1%;
-  margin-bottom: 5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   z-index: 9999;
 }
 
-footer {
-  margin-top: auto;
-  padding: 1%;
-  background-color: #f1f1f1;
-  font-family: 'Quicksand', sans-serif;
-  width: 100%;
+.footer {
+  padding: 2rem;
+  background: #f5f5f5;
+  font-family: 'font2';
+  text-align: center;
   z-index: 10;
+}
+
+.footer-tag {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-button {
+  border: 1px solid #1a1a1a;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: rgb(190, 221, 248);
+  border: white;
+}
+
+
+.about-us {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 90px 0;
+  background: #fff;
+}
+
+.pic {
+  height: auto;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  width: 540px;
+}
+
+.text h2 {
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
 }
