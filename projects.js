@@ -24,7 +24,7 @@ let projCollection = [
     "itemTitle": "Java Kahoot",
     "category": "Fulstack",
     "id": "23",
-    "image": "images/simcache.png",
+    "image": "images/java_kahoot.png",
     "language": "Java"
   },
 

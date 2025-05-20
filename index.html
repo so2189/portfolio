@@ -86,39 +86,37 @@
 			}
 
 			function typeLine2() {
-			if (i < line2.length) {
-				document.getElementById("line2").innerHTML += line2.charAt(i);
-				i++;
-				setTimeout(typeLine2, speed);
-			}
+				if (i < line2.length) {
+					document.getElementById("line2").innerHTML += line2.charAt(i);
+					i++;
+					setTimeout(typeLine2, speed);
+				}
 			}
 
 			typeLine1();
-			
-				// Vertical word typing, word by word
-				const word1 = 'CREATIVE';
-				const word2 = 'DESIGNER';
-			
-				const col1 = document.getElementById("col1");
-				const col2 = document.getElementById("col2");
-			
-				let j = 0;
-			
-				function typeVerticalWord(word, column, delay = 0) {
-				  for (let k = 0; k < word.length; k++) {
-					setTimeout(() => {
-					  const span = document.createElement('span');
-					  span.textContent = word[k];
-					  column.appendChild(span);
-					}, delay + k * 100);
-				  }
+
+			const word1 = 'CREATIVE';
+			const word2 = 'DESIGNER';
+			const col1 = document.getElementById("col1");
+			const col2 = document.getElementById("col2");
+
+			function typeVerticalWord(word, column, delay = 0) {
+				for (let k = 0; k < word.length; k++) {
+				setTimeout(() => {
+					const letterSpan = document.createElement("span");
+					letterSpan.textContent = word[k];
+					column.appendChild(letterSpan);
+				}, delay + k * 150); // Adjust speed here
 				}
-			
-				// Type both words vertically
+			}
+
+			const totalTypingTime = (line1.length + line2.length) * speed + 500;
+			setTimeout(() => {
 				typeVerticalWord(word1, col1);
-				typeVerticalWord(word2, col2, word1.length * 100);s
-				
-			</script>
+				typeVerticalWord(word2, col2);
+			}, totalTypingTime);
+
+		</script>
 
     </div> <!-- End of wrapper -->
 
@@ -142,7 +140,7 @@
 		<div id="connect_button">
 			<button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
 			<button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
-			<button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1YfbXLfLcVh7AAJlX2NvMvBmkGX8Fzg7-/view?usp=sharing', '_blank')">Resume</button>
+			<button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
 		</div>
 		<hr />
 		<p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Copyrights Reserved</p>
