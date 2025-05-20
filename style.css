@@ -72,7 +72,7 @@
   margin: 3%;
   height: 70px;
   position: relative;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap; 
 }
 
 .navbar .name {
@@ -83,8 +83,9 @@
 }
 
 .navbar .logo {
-  height: 100px;
+  height: 9vw;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .links {
