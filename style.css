@@ -20,8 +20,10 @@
 }
 
 .logo {
-  width: 15%;
-  height: auto;
+  margin-left: 5%;
+  width: 7%;
+  height: 68px;
+  margin-top: 1%;
 }
 
 .myNav {
@@ -82,7 +84,7 @@ h1 {
 }
 
 .name p {
-  margin-top: 3%;
+  margin-top: 5%;
   margin-bottom: 1%;
   margin-left: 2%;
   font-size: 5vw;
