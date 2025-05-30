@@ -9,7 +9,8 @@ let projCollection = [
     "category": "Fullstack",
     "id": "1",
     "image": "images/fantasy.png",
-    "language": "SQL, PHP, HTML/CSS"
+    "language": "SQL, PHP, HTML/CSS",
+    "link": "/projects/fantasy_sports.html"
   },
 
   {
@@ -17,7 +18,8 @@ let projCollection = [
     "category": "Fullstack",
     "id": "2",
     "image": "images/winfra.png",
-    "language": "PostgreSQL, Python, JS"
+    "language": "PostgreSQL, Python, JS",
+    "link": "/projects/winfra.html"
   },
 
     {
@@ -25,7 +27,8 @@ let projCollection = [
     "category": "Fulstack",
     "id": "23",
     "image": "images/java_kahoot.png",
-    "language": "Java"
+    "language": "Java",
+    "link": "/projects/java_kahoot.html"
   },
 
   {
@@ -33,16 +36,17 @@ let projCollection = [
     "category": "Fullstack",
     "id": "3",
     "image": "images/fullourish.png",
-    "language": "API, JS, HTML/CSS"
+    "language": "API, JS, HTML/CSS",
+    "link": "/projects/fullourish.html"
   },
-
 
   {
     "itemTitle": "Cache Simulator",
     "category": "Data",
     "id": "4",
     "image": "images/simcache.png",
-    "language": "C++"
+    "language": "C++",
+    "link": "/projects/cache_sim.html"
   },
 
   {
@@ -50,7 +54,8 @@ let projCollection = [
     "category": "Data",
     "id": "5",
     "image": "images/sensitivity_analysis.png",
-    "language": "R"
+    "language": "R",
+    "link": "/projects/sensitivity.html"
   },
 
   {
@@ -58,7 +63,8 @@ let projCollection = [
     "category": "Creative",
     "id": "6",
     "image": "images/selfreflection.png",
-    "language": "p5js"
+    "language": "p5js",
+    "link": "/projects/reflection.html"
   },
 
   {
@@ -66,31 +72,35 @@ let projCollection = [
     "category": "Creative",
     "id": "7",
     "image": "images/cyberspace.png",
-    "language": "p5js"
+    "language": "p5js",
+    "link": "/projects/cyberspace.html"
   },
 
-  {
-    "itemTitle": "CatCam",
-    "category": "Mobile Dev",
-    "id": "8",
-    "image": "images/catcam.png",
-    "language": "Swift"
-  },
+  // {
+  //   "itemTitle": "CatCam",
+  //   "category": "Mobile Dev",
+  //   "id": "8",
+  //   "image": "images/catcam.png",
+  //   "language": "Swift",
+  //   "link": "/projects/fantasy_sports.html"
+  // },
 
-  {
-    "itemTitle": "iAct",
-    "category": "Mobile Dev",
-    "id": "9",
-    "image": "images/iAct.png",
-    "language": "Swift"
-  },
+  // {
+  //   "itemTitle": "iAct",
+  //   "category": "Mobile Dev",
+  //   "id": "9",
+  //   "image": "images/iAct.png",
+  //   "language": "Swift",
+  //   "link": "/projects/fantasy_sports.html"
+  // },
 
   {
     "itemTitle": "TandonStudy",
     "category": "Fullstack",
     "id": "10",
     "image": "images/tandonstudy.png",
-    "language": "HTML/CSS"
+    "language": "HTML/CSS",
+    "link": "/projects/tandon_study.html"
   },
 
   {
@@ -98,7 +108,8 @@ let projCollection = [
     "category": "Data",
     "id": "11",
     "image": "images/tic_tac_toe.png",
-    "language": "R"
+    "language": "R",
+    "link": "/projects/tictactoe.html"
   },
 
   {
@@ -106,7 +117,8 @@ let projCollection = [
     "category": "Data",
     "id": "12",
     "image": "images/galton_board.jpg",
-    "language": "R"
+    "language": "R",
+    "link": "/projects/galton_board.html"
   },
   
   {
@@ -114,7 +126,8 @@ let projCollection = [
     "category": "Data",
     "id": "13",
     "image": "images/number_line.jpg",
-    "language": "R"
+    "language": "R",
+    "link": "/projects/number_ml.html"
   },
 
   {
@@ -122,7 +135,8 @@ let projCollection = [
     "category": "Creative",
     "id": "14",
     "image": "images/audio_vis.jpg",
-    "language": "Max"
+    "language": "Max",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -130,7 +144,8 @@ let projCollection = [
     "category": "Game Dev",
     "id": "15",
     "image": "images/breakout.jpg",
-    "language": "p5js"
+    "language": "p5js",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -138,7 +153,8 @@ let projCollection = [
     "category": "Game Dev",
     "id": "16",
     "image": "images/fishfrenzy.png",
-    "language": "p5js"
+    "language": "p5js",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -146,7 +162,8 @@ let projCollection = [
     "category": "Creative",
     "id": "17",
     "image": "images/cupcakes.png",
-    "language": "p5js"
+    "language": "p5js",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -154,7 +171,8 @@ let projCollection = [
     "category": "Game Dev",
     "id": "18",
     "image": "images/fruitdrop.jpg",
-    "language": "p5js"
+    "language": "p5js",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -162,7 +180,8 @@ let projCollection = [
     "category": "Game Dev",
     "id": "19",
     "image": "images/carrotcatcher.png",
-    "language": "GML"
+    "language": "GML",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -170,7 +189,8 @@ let projCollection = [
     "category": "Creative",
     "id": "20",
     "image": "images/bookshelf.png",
-    "language": "Arduino"
+    "language": "Arduino",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -178,7 +198,8 @@ let projCollection = [
     "category": "Creative",
     "id": "21",
     "image": "images/mural.jpeg",
-    "language": "C"
+    "language": "C",
+    "link": "/projects/synth.html"
   },
 
   {
@@ -186,8 +207,55 @@ let projCollection = [
     "category": "Game Dev",
     "id": "22",
     "image": "images/pawpals.png",
-    "language": "GML"
-  }
+    "language": "GML",
+    "link": "/projects/synth.html"
+  },
+
+  {
+    "itemTitle": "Breyers Redesign",
+    "category": "Design",
+    "id": "23",
+    "image": "images/breyers.png",
+    "language": "Adobe",
+    "link": "https://drive.google.com/file/d/1F1V2Ehnv3Wmo5oVFwspvmhoJO_8XRYe8/view?usp=sharing"
+  },
+
+  {
+    "itemTitle": "Panier Cadeau",
+    "category": "Design",
+    "id": "24",
+    "image": "images/panier.png",
+    "language": "Adobe",
+    "link": "https://drive.google.com/file/d/1v6jDtDsMvJ1cNu2HIKDASsBkDTbPJT-J/view?usp=sharing"
+  },
+
+  {
+    "itemTitle": "Projection Mapping",
+    "category": "Data",
+    "id": "24",
+    "image": "images/projection.png",
+    "language": "p5js",
+    "link": "/projects/synth.html"
+  },
+
+  {
+    "itemTitle": "Dog bites",
+    "category": "Data",
+    "id": "25",
+    "image": "images/dog_bites.png",
+    "language": "Unity",
+    "link": "/projects/synth.html"
+  },
+
+  {
+    "itemTitle": "Nescatfe",
+    "category": "Design",
+    "id": "26",
+    "image": "images/nescatfe.png",
+    "language": "Adobe",
+    "link": "https://drive.google.com/file/d/1V8R7zS5zMD-PQ5vMq4qyr8JKCEnxmvqw/view?usp=sharing"
+  },
+  
 
 ];
 
@@ -253,22 +321,31 @@ function createProjectPreview(incomingJSON) {
   outputGridElement.appendChild(newPreviewElement);
 }
 
-function createProjectPage(incomingJSON) {
-  projTitleElement.innerText = incomingJSON["itemTitle"];
+function createProjectPreview(incomingJSON) {
+  let linkElement = document.createElement("A");
+  linkElement.href = incomingJSON["link"];
+  linkElement.target = "_blank";
+  linkElement.rel = "noopener noreferrer";
+  linkElement.classList.add("project-link");
 
-  let newProjectElement = document.createElement("DIV");
+  let newPreviewElement = document.createElement("DIV");
+  newPreviewElement.classList.add("project-preview");
 
-  if (incomingJSON["bio"]) {
-    let newProjectLink = document.createElement("A");
-    newProjectLink.href = incomingJSON["bio"];
-    newProjectLink.innerText = "Bio";
-    newProjectElement.appendChild(newProjectLink);
-  }
+  let newPreviewThumbnail = document.createElement("IMG");
+  newPreviewThumbnail.classList.add("thumbnail");
+  newPreviewThumbnail.src = incomingJSON["image"];
+  newPreviewElement.appendChild(newPreviewThumbnail);
 
-  let newProjectImage = document.createElement("IMG");
-  newProjectImage.classList.add("projectHeroImage");
-  newProjectImage.src = incomingJSON["image"];
-  newProjectElement.appendChild(newProjectImage);
+  let newPreviewTitle = document.createElement("P");
+  newPreviewTitle.classList.add("previewTitle");
+  newPreviewTitle.innerText = incomingJSON["itemTitle"];
+  newPreviewElement.appendChild(newPreviewTitle);
 
-  projectDisplayElement.appendChild(newProjectElement);
+  let newPreviewData = document.createElement("DATA");
+  newPreviewData.classList.add("previewData");
+  newPreviewData.innerText = incomingJSON["language"];
+  newPreviewElement.appendChild(newPreviewData);
+
+  linkElement.appendChild(newPreviewElement);
+  outputGridElement.appendChild(linkElement);
 }

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fantasy Sports League Management System | Sanjida Orpi</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../fx.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+        <div class="name">Sanjida Orpi</div>
+		<svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+			<defs>
+			  <path id="circle" d="M 100, 100
+					  m -75, 0
+					  a 75, 75 0 1, 0 150, 0
+					  a 75, 75 0 1, 0 -150, 0
+					  ">
+			  </path>
+			</defs>
+			<text width="400">
+			  <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+				Sanjida Orpi ✧ Sanjida Orpi ✧ 
+			  </textPath>
+			</text>
+		</svg>
+		<div class="spinner"></div>
+        <div class="links">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Fantasy Sports League Management System</h1>
+            <p>A full-stack web application that allows users to create and manage fantasy sports leagues. 
+                The project showcases end-to-end development—from database design to interface implementation 
+                with a strong focus on relational schema design, SQL integration, and user-centered design.</p>
+            <a href="https://fantasysport.duckdns.org" target="_blank" class="hero-button">Visit Site</a>
+          </div>
+          <div class="hero-image">
+            <img src="../images/fantasy_banner.png" alt="Screenshot of project" />
+          </div>
+        </div>
+      </section>
+      
+      <section class="project-content">
+        <div class="project-details">
+          <h2>Overview</h2>
+          <p>This project was designed to create a platform where users can build and manage their own fantasy sports leagues. 
+             It incorporates secure authentication, dynamic interfaces, and a relational database built from the ground up. 
+             Developed over the course of several weeks, it involved front-end design, SQL schema planning, and backend PHP development.</p>
+
+            <h2>Features</h2>
+            <ul>
+               <li>✦ Create and manage custom fantasy sports leagues with real-time updates</li>
+               <li>✦ Role-based access control: Developer vs. User, with distinct permissions</li>
+               <li>✦ Secure login system with SHA2 password hashing and session-based authentication</li>
+               <li>✦ Relational database schema built for scalability and integrity (users, leagues, teams, players)</li>
+               <li>✦ Developer-only data export functionality based on account privileges</li>
+               <li>✦ SQL-level privilege management using GRANT and REVOKE commands</li>
+               <li>✦ User dashboard to edit profile info and manage teams/leagues</li>
+               <li>✦ Redirect logic based on login state and privilege level</li>
+            </ul>
+             
+        </div>
+      
+        <aside class="project-sidebar">
+          <h3>Tech Stack</h3>
+          <ul>
+            <li>MySQL & PHP</li>
+            <li>HTML/CSS</li>
+            <li>phpMyAdmin</li>
+            <li>Github</li>
+            <li>Ngrok</li>
+            <li>Figma (wireframes)</li>
+          </ul>
+        </aside>
+      </section>
+      
+
+    <section class="process">
+        <h2>Design Process</h2>
+        <div class="wireframes">
+            <h3>Wireframes</h3>
+            <p>We started with Figma wireframes to map out key user flows—registration, draft interface, and scoreboard. These helped us plan intuitive layouts and responsive designs.</p>
+        </div>
+    </section>
+
+    <div class="wireframe-gallery">
+        <img src="images/fantasy1.png" alt="Login Wireframe" class="expandable" />
+        <img src="images/fantasy2.png" alt="Draft Screen Wireframe" class="expandable" />
+        <img src="images/fantasy3.png" alt="Scoreboard Wireframe" class="expandable" />
+        <img src="images/fantasy4.png" alt="Login Wireframe" class="expandable" />
+        <img src="images/fantasy5.png" alt="Draft Screen Wireframe" class="expandable" />
+        <img src="images/fantasy6.png" alt="Scoreboard Wireframe" class="expandable" />
+    </div>
+
+    <section class="process">
+        <div class="schema">
+            <h3>Database Schema</h3>
+            <p>Our ER diagram models relationships between Users, Teams, Players, Leagues, and Matches. Primary and foreign keys ensure data integrity. Click the schema image to expand.</p>
+            <img src="images/fantasy_schema.png" alt="Database Schema" class="expandable" />
+        </div>
+
+        <center><h3 style="padding-top: 5%;">Then developed! collaboratively with two teammates.</h3></center>
+    </section>
+
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <footer class="footer">
+      <p class="footer-tag"> Let's connect </p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.expandable');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.close');
+  
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          document.body.style.overflow = 'hidden'; // optional: stop background scroll
+        });
+      });
+  
+      close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Expanded image" />
+    </div>
+  
+</body>
+</html>
