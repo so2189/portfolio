@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project by Sanjida Orpi</title>
+    <title>Winfra | Sanjida Orpi</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="../fx.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,33 +13,243 @@
 
     <nav class="navbar">
         <div class="name">Sanjida Orpi</div>
-		<svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
-			<defs>
-			  <path id="circle" d="M 100, 100
-					  m -75, 0
-					  a 75, 75 0 1, 0 150, 0
-					  a 75, 75 0 1, 0 -150, 0
-					  ">
-			  </path>
-			</defs>
-			<text width="400">
-			  <textPath alignment-baseline="top" xlink:href="#circle" class="text">
-				Sanjida Orpi ✧ Sanjida Orpi ✧ 
-			  </textPath>
-			</text>
-		</svg>
-		<div class="spinner"></div>
+    <svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+      <defs>
+        <path id="circle" d="M 100, 100
+            m -75, 0
+            a 75, 75 0 1, 0 150, 0
+            a 75, 75 0 1, 0 -150, 0
+            ">
+        </path>
+      </defs>
+      <text width="400">
+        <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+        Sanjida Orpi ✧ Sanjida Orpi ✧ 
+        </textPath>
+      </text>
+    </svg>
+    <div class="spinner"></div>
         <div class="links">
             <li><a href="../index.html">About</a></li>
             <li><a href="../projects.html">Projects</a></li>
         </div>
     </nav>
 
-    <center><h3>Sorry, this page is currently under construction, thank you for your patience ◡̈</h3></center>
+    <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Winfra</h1>
+            <p>A full-stack civic web platform designed to empower New Yorkers to report, discuss, and improve urban
+               infrastructure in real time. Through an interactive map interface and community features, users 
+               can flag accessibility issues, propose solutions, and connect directly with local officials. This
+               project was created with three teammembers as our senior design project at NYU Tandon, with a focus
+               on Software Engineering principles, we collaborated on all aspects of this project in an Agile workflow.
+            </p>
+          </div>
+          <div class="hero-image">
+            <img src="../images/winfra_banner.png" alt="Screenshot of project" />
+          </div>
+        </div>
+      </section>
+      
+      <section class="project-content">
+        <div class="project-details">
+          <h2>Overview</h2>
+          <p>Winfra is a civic tech platform designed to improve urban infrastructure through community reporting and collaboration. 
+             Users can submit real-time accessibility reports, browse an interactive map of issues, and advocate for solutions—especially 
+             addressing the needs of disabled New Yorkers. This project was developed using modern full-stack technologies and focuses 
+             on accessibility, community design, and local impact.
+          </p>
+      
+          <h2>Features</h2>
+          <ul>
+            <li>✦ Real-time infrastructure issue reporting via an interactive city map</li>
+            <li>✦ Visual tagging of reports in NYC and local map region</li>
+            <li>✦ Account creation with personalized dashboards to view and manage user reports</li>
+            <li>✦ Authentication and role-based access for citizens and officials</li>
+            <li>✦ Community discussion threads on each report to drive public awareness</li>
+            <li>✦ Mobile-friendly, accessibility-first UI for reporting on the go</li>
+            <li>✦ Location sharing to surface live info about local infrastructure and reps</li>
+            <li>✦ Automatic email drafting to local representatives based on user location</li>
+            <li>✦ Commenting, sharing, and engagement tools to amplify community voice</li>
+          </ul>
+          
+        </div>
+      
+        <aside class="project-sidebar">
+          <h3>Tech Stack</h3>
+          <ul>
+            <li>FastAPI / Python</li>
+            <li>PostgreSQL</li>
+            <li>HTML / CSS</li>
+            <li>JavaScript / Leaflet</li>
+            <li>Github</li>
+            <li>Figma</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section class="process">
+        <h2>Process</h2>
+      
+        <h3>Project Documentation</h3>
+        <div class="wireframe-gallery" style="padding-left: 5%;">
+          <div class="pdf-container">
+            <h2>Software Requirements Specification (SRS)</h2>
+            <div class="pdf-frame">
+              <a href="../images/winfra_srs.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="../images/winfra_srs.png" alt="SRS" class="expandable" />
+              </a>              
+            </div>
+            <div class="pdf-embed hidden"></div>
+          </div>
 
+          <div class="pdf-container">
+            <h2>Project Management Plan</h2>
+            <div class="pdf-frame">
+              <a href="../images/winfra_spmp.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="../images/winfra_spmp.png" alt="SPMP" class="expandable" />
+              </a>              
+            </div>
+            <div class="pdf-embed hidden"></div>
+          </div>  
+
+          <div class="pdf-container">
+            <h2>System Design Description</h2>
+            <div class="pdf-frame">
+              <a href="../images/winfra_sdd.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="../images/winfra_sdd.png" alt="SPDD" class="expandable" />
+              </a>              
+            </div>
+            <div class="pdf-embed hidden"></div>
+          </div>
+        </div>
+
+
+      <div class="wireframes">
+          <h3>Wireframes</h3>
+          <p>Initial interface sketches were designed in Figma to undertand the layout, interaction flow, and navigation between pages/features.</p>
+          
+        </section>
+
+          <div class="wireframe-gallery" style="padding-left: 42%;">
+            <img src="images/winfra1.png" class="expandable" />
+            <img src="images/winfra2.png" class="expandable" />
+            <img src="images/winfra3.png" class="expandable" />
+            <img src="images/winfra4.png" class="expandable" />
+            <img src="images/winfra5.png" class="expandable" />
+            <img src="images/winfra6.png" class="expandable" />
+          </div>
+      </div>
+
+        
+    <section class="process">
+        <div class="demo-pres-container">
+          <div class="site-demo">
+            <h3>Site Demo</h3>
+            <video width="100%" style='border: 2px solid #000000;' controls>
+              <source src="../images/winfra_documentation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        
+          <div class="presentation">
+            <h3>Final Presentation</h3>
+            <iframe style='border: 2px solid #000000;' src="../images/winfra_presentation.pdf" width="100%" height="400" title="Winfra Presentation"></iframe>
+          </div>
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+      <p class="footer-tag"> Let's connect </p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.expandable');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.close');
+  
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+  
+      close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+    const backToTopButton = document.getElementById('backToTop');
 
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.querySelectorAll('.expandable').forEach(img => {
+      img.addEventListener('click', () => {
+        const pdfSrc = img.getAttribute('data-pdf');
+        if (pdfSrc) {
+          const pdfOverlay = document.getElementById('pdfOverlay');
+          const pdfEmbed = document.getElementById('pdfEmbed');
+          pdfEmbed.src = pdfSrc + '#view=FitH';
+          pdfOverlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    document.querySelector('.pdf-close').addEventListener('click', () => {
+      document.getElementById('pdfOverlay').classList.add('hidden');
+      document.getElementById('pdfEmbed').src = '';
+      document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (e) => {
+      const overlay = document.getElementById('pdfOverlay');
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        document.getElementById('pdfEmbed').src = '';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+  </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Expanded image" />
+    </div>
   
 </body>
 </html>
+

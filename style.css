@@ -379,7 +379,7 @@ h1 {
 }
 
 
-
+/* Porfolio project pages outline */
 .hero {
   padding: 4rem 2rem;
   background-color: #f8f8f8;
@@ -475,15 +475,13 @@ h1 {
   font-family: 'Quicksand', sans-serif;
 }
 
-
+/* Porfolio process section */
 .process {
   background-color: #fff;
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 7%;
 }
 .process h2 {
-  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 .wireframe-gallery {
@@ -492,10 +490,9 @@ h1 {
   gap: 1rem;
   justify-content: center;
   padding-bottom: 1rem;
-  padding-left: 42%;
 }
 .wireframe-gallery img,
-.schema img {
+.schema img, embed {
   width: 40%;
   height: auto;
   border-radius: 8px;
@@ -511,6 +508,7 @@ h1 {
   margin-top: 2rem;
 }
 
+/* Porfolio gallery (bottom) */
 
 .project-gallery {
   margin-left: 5%;
@@ -527,7 +525,7 @@ h1 {
   object-fit: cover;
 }
 
-
+/* Porfolio wireframe lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -546,6 +544,11 @@ h1 {
   max-width: 80%;
   max-height: 80%;
   border-radius: 12px;
+}
+.wireframe-gallery > img {
+  margin-top: 5%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .close {
   position: absolute;
@@ -582,4 +585,63 @@ h1 {
 
 #backToTop:hover {
   background-color: #000;
+}
+
+/* Winfra pdf embeds */
+
+.pdf-container h2 {
+  font-size: 1rem;
+  margin: 16px 0;
+  flex-shrink: 0;
+}
+.pdf-container {
+  margin-bottom: 2rem;
+}
+
+.pdf-frame img.expandable {
+  cursor: pointer;
+  width: 95%;
+  max-width: 600px;
+  transition: transform 0.2s ease;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-frame img.expandable:hover {
+  transform: scale(1.03);
+}
+
+.pdf-embed {
+  margin-top: 1rem;
+  width: 100%;
+  height: 80vh;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.demo-pres-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 7%;
+}
+
+.site-demo, .presentation {
+  flex: 1 1 500px;
+  max-width: 800px;
+}
+
+.presentation {
+  margin-top: 20%;
 }
