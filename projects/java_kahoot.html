@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project by Sanjida Orpi</title>
+    <title>Java Kahoot | Sanjida Orpi</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../fx.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
@@ -36,11 +36,131 @@
         </div>
     </nav>
 
-    <center><h3>Sorry, this page is currently under construction, thank you for your patience ◡̈</h3></center>
+    <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Java Kahoot</h1>
+            <p>A Java-based multiplayer trivia game inspired by Kahoot, where players compete in real-time to answer
+              questions from a customizable set. The project showcases core Java concepts like thread concurrency,
+              networking, and file I/O, enabling players to join via IP address and play using their own devices.
+            </p>
+            <a href="https://github.com/sanjidaorpi/Kahoot" target="_blank" class="hero-button">Visit Github</a>
+          </div>
+          <div class="hero-image">
+            <img src="../images/kahoot_banner.png" alt="Screenshot of project" />
+          </div>
+        </div>
+      </section>
+      
+      <section class="project-content">
+        <div class="project-details">
+          <h2>Overview</h2>
+          <p>
+            Java Kahoot is a desktop-based trivia game that allows multiple players to connect and compete by answering questions in real-time. 
+            Built in Java, the project demonstrates the integration of thread concurrency, networking, and file I/O. 
+            The host runs the game and shares a PIN and IP address for others to join using their own devices. 
+            Questions are pulled from a customizable JSON file using the JSON Simple library, allowing for flexible game content. This
+            project was created collaboratively for a final project for Java at NYU.
+          </p>
+      
+          <h2>Features</h2>
+          <ul>
+            <li>✦ Multiplayer trivia game hosted on a local machine via IP-based socket networking</li>
+            <li>✦ Players join using a game PIN and username through their own devices</li>
+            <li>✦ Thread concurrency ensures accurate detection of who answers each question first</li>
+            <li>✦ File I/O handles reading trivia question sets from JSON files for dynamic gameplay</li>
+            <li>✦ End-of-game scoreboard ranks players based on speed and accuracy</li>
+            <li>✦ Easily customizable question sets using JSON Simple library</li>
+            <li>✦ Main gameplay visible on host screen, with real-time updates pushed to player clients</li>
+          </ul>
+        </div>
+      
+        <aside class="project-sidebar">
+          <h3>Tech Stack</h3>
+          <ul>
+            <li>Java</li>
+          </ul>
+        </aside>
+      </section>
+      
+    <section class="process">
+        <h2>Gallery</h2>
+        <div class="wireframes">
+          <h3>Java GUIs of final development.</h3>
+        </div>
+    </section>
 
+    <div class="wireframe-gallery" style="padding-left: 42%; margin-bottom: 5%;">
+        <img src="images/kahoot1.png" class="expandable" />
+        <img src="images/kahoot2.png" class="expandable" />
+        <img src="images/kahoot3.png"  class="expandable" />
+        <img src="images/kahoot4.png" class="expandable" />
+        <img src="images/kahoot5.png" class="expandable" />
+        <img src="images/kahoot6.png" class="expandable" />
+    </div>
+
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <footer class="footer">
+      <p class="footer-tag"> Let's connect </p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.expandable');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.close');
+  
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+  
+      close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
 
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Expanded image" />
+    </div>
   
 </body>
 </html>
