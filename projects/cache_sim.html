@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project by Sanjida Orpi</title>
+    <title>Cache Simulator | Sanjida Orpi</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../fx.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
@@ -36,11 +36,124 @@
         </div>
     </nav>
 
-    <center><h3>Sorry, this page is currently under construction, thank you for your patience ◡̈</h3></center>
-
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Cache Simulator</h1>
+          <p>
+            This project builds upon the <strong>E20 simulator</strong> I developed for CS-UY 2214 (Computer Architecture) by 
+            implementing a configurable cache hierarchy system that models hardware-level memory interactions. 
+            The E20 architecture, loosely inspired by x86, simplifies low-level execution behavior to help visualize 
+            concepts such as memory reads/writes, hits/misses, and cache replacement policies.
+          </p>
+          <a href="https://github.com/sanjidaorpi/Cache-Simulator" target="_blank" class="hero-button">Visit GitHub</a>
+        </div>
+        <div class="hero-image">
+          <img src="../images/simcache_banner.png" alt="Screenshot of cache simulator" />
+        </div>
+      </div>
+    </section>
+    
+    <section class="project-content">
+      <div class="project-details">
+        <h2>Overview</h2>
+        <p>
+          The E20 Cache Simulator is designed to model the effects of E20 assembly instruction execution on a two-level cache system.
+          It supports <strong>real-time logging</strong> of memory interactions including load/store instructions, cache hits and misses, 
+          and address mappings to cache rows. All memory is initially empty, and instruction fetches are assumed to bypass the cache 
+          for simplicity. This tool is ideal for visualizing memory hierarchy behavior, analyzing access patterns, and testing 
+          different cache configurations under controlled conditions.
+        </p>
+    
+        <h2>Key Features</h2>
+        <ul>
+          <li>✦ Supports both L1 and L2 caches with configurable size, associativity, and blocksize</li>
+          <li>✦ Implements <strong>Least Recently Used (LRU)</strong> replacement policy for associative caches</li>
+          <li>✦ Uses <strong>write-through and write-allocate</strong> policy for all memory writes</li>
+          <li>✦ Logs all <code>lw</code> and <code>sw</code> instructions with cache-level results (HIT or MISS)</li>
+          <li>✦ Tracks and reports cache statistics: hits, misses, reads, and writes</li>
+          <li>✦ Output format matches low-level simulator log structure for debugging</li>
+        </ul>
+    
+        <h2>Configurable Parameters</h2>
+        <ul>
+          <li><strong>BLOCKSIZE:</strong> Number of memory cells per cache block</li>
+          <li><strong>L1_Size:</strong> Total data size in cells for L1 Cache</li>
+          <li><strong>L1_Assoc:</strong> Associativity of the L1 Cache</li>
+          <li><strong>L2_Size:</strong> Total data size in cells for L2 Cache</li>
+          <li><strong>L2_Assoc:</strong> Associativity of the L2 Cache</li>
+          <li><strong>Trace Input:</strong> The E20 program’s instruction set executed during simulation</li>
+        </ul>
+      </div>
+    
+      <aside class="project-sidebar">
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>C++</li>
+        </ul>
+      </aside>
+    </section>
+    
+    <footer class="footer">
+      <p class="footer-tag"> Let's connect </p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.expandable');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.close');
+  
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+  
+      close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
 
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Expanded image" />
+    </div>
   
 </body>
 </html>

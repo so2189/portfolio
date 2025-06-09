@@ -413,6 +413,22 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    flex: 1 1 100%;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+
+
 .hero-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -462,6 +478,7 @@ h1 {
   flex: 2;
   min-width: 280px;
   list-style: none;
+  line-height: 2em;
 }
 .project-details > ul {
   list-style: none;
