@@ -2,45 +2,241 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project by Sanjida Orpi</title>
+    <title>Sensitivity Analysis | Sanjida Orpi</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="../fx.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div class="container">
-
     <nav class="navbar">
-        <div class="name">Sanjida Orpi</div>
-		<svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
-			<defs>
-			  <path id="circle" d="M 100, 100
-					  m -75, 0
-					  a 75, 75 0 1, 0 150, 0
-					  a 75, 75 0 1, 0 -150, 0
-					  ">
-			  </path>
-			</defs>
-			<text width="400">
-			  <textPath alignment-baseline="top" xlink:href="#circle" class="text">
-				Sanjida Orpi ✧ Sanjida Orpi ✧ 
-			  </textPath>
-			</text>
-		</svg>
-		<div class="spinner"></div>
+    <div class="name"><a href="../index.html">Sanjida Orpi</a></div>
+    <svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+      <defs>
+        <path id="circle" d="M 100, 100
+            m -75, 0
+            a 75, 75 0 1, 0 150, 0
+            a 75, 75 0 1, 0 -150, 0
+            ">
+        </path>
+      </defs>
+      <text width="400">
+        <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+        Sanjida Orpi ✧ Sanjida Orpi ✧ 
+        </textPath>
+      </text>
+    </svg>
+    <div class="spinner"></div>
         <div class="links">
             <li><a href="../index.html">About</a></li>
             <li><a href="../projects.html">Projects</a></li>
         </div>
     </nav>
 
-    <center><h3>Sorry, this page is currently under construction, thank you for your patience ◡̈</h3></center>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Sensitivity Analysis</h1>
+          <p>This project explores the robustness of treatment effect estimates through sensitivity analysis using Inverse Probability Weighting (IPW) and a genetic algorithm. 
+             By simulating a randomized controlled trial and bootstrapping the treatment effect under varying levels of hidden bias (G), assessed the conditions under which
+             the estimated causal effect of a vaccine on health outcomes. 
+             The analysis builds on Daniel McCaffrey’s approach to evaluating causal effects in observational studies done as a research
+             project at the Dynamical Systems Lab at NYU in order to make observations about gun violence data in the US.
+          </p>
+          <a href="https://github.com/sanjidaorpi/sensitivity-analysis" target="_blank" class="hero-button">Visit Github</a>
+        </div>
+        <div class="hero-image">
+          <img src="../images/sensitivity_banner.png"/>
+        </div>
+      </div>
+    </section>    
+      
+    <section class="project-content">
+      <div class="project-details">
+        <h2>Overview</h2>
+        <p>This project implements a sensitivity analysis framework for causal inference using Inverse Probability Weighting (IPW) and a Genetic Algorithm (GA).
+           The goal is to assess the reliability of estimated treatment effects in the presence of potential hidden biases. By simulating a sample of 5000 observations
+           from a randomized controlled trial and systematically introducing unobserved confounding via the sensitivity parameter G, we determine how robust
+           the observed Average Treatment Effect (ATE) is to deviations from the assumption of no hidden bias.
+        </p>
+    
+        <p>
+          This combination of genetic optimization and bootstrap estimation allows for a flexible and powerful way to 
+          quantify the effect of hidden bias in causal inference.
+        </p>  
+      </div>
+    
+      <aside class="project-sidebar">
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>✦&nbsp;&nbsp;R</li>
+          <li>✦&nbsp;&nbsp;RStudio</li>
+        </ul>
+      </aside>
+    </section>    
+      
+      <section class="process">
+        <div class="methods-layout" style="margin-top: 3rem;">
+  
+          <div class="methods-text" style="flex: 1 1 50%; margin-right: 10%;">
+            <h2>Approach</h2>
+            <ul>
+              <li>✦&nbsp;&nbsp;Simulated a treatment-control dataset with observed and unobserved confounders</li>
+              <li>✦&nbsp;&nbsp;Applied Inverse Probability Weighting to estimate the Average Treatment Effect (ATE)</li>
+              <li>✦&nbsp;&nbsp;Implemented a Genetic Algorithm to iteratively increase the sensitivity parameter G</li>
+              <li>✦&nbsp;&nbsp;Ran a bootstrap procedure to find the smallest G where the 95% CI of ATE contains 0</li>
+              <li>✦&nbsp;&nbsp;Evaluated scenarios of moderate and severe bias by excluding key covariates (age, sex)</li>
+            </ul>
+        
+            <div class="methods-layout" style="display: flex; margin-top: 3rem;">
 
+              <div class="methods-text" style="width: 60%; padding-right: 20%;">
+
+                <div style="margin-bottom: 10%;">
+                <h2>Methods</h2>
+                <p>
+                  To assess the robustness of the estimated treatment effect to hidden bias, we implemented a <strong>Genetic Algorithm (GA)</strong>
+                  as an adaptive heuristic search method...
+                </p>
+                <p>
+                  The GA operates within a high-dimensional parameter space and is inspired by the evolutionary principles of 
+                  <em>natural selection</em>. ...
+                </p>
+              </div>
+
+              <div>
+                <h3>Key Components</h3>
+                  <ul>
+                    <li>✦&nbsp;&nbsp;<strong>Search Space:</strong> Values of <code>G</code> tested in increments (e.g., 1.0, 1.1, 1.2...)</li>
+                    <li>✦&nbsp;&nbsp;<strong>Fitness Function:</strong> Calculates ATE via IPW and checks if the 95% CI includes 0</li>
+                    <li>✦&nbsp;&nbsp;<strong>Selection:</strong> Picks candidates that bring ATE closer to 0</li>
+                    <li>✦&nbsp;&nbsp;<strong>Crossover:</strong> Combines <code>G</code> values from parent solutions</li>
+                    <li>✦&nbsp;&nbsp;<strong>Mutation:</strong> Introduces random variations to promote diversity</li>
+                  </ul>
+              </div>
+
+              
+            </div>
+                  
+              <div class="methods-image" style="width: 60%; flex-wrap: wrap; text-align: center;">
+                <img src="../images/genetic.png" 
+                    style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
+              </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 5%;">
+          <h2>Key Results</h2>
+          <ul>
+            <li>Sample size: 5000 observations</li>
+            <li>At G = 1.1, the bootstrap confidence interval of the estimated ATE included 0</li>
+            <li>Indicates sensitivity to even modest hidden biases in the causal model</li>
+          </ul>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>
+          The low G threshold demonstrates that the estimated vaccine effect is highly sensitive to unobserved confounding, suggesting limited robustness of the causal inference.
+          As next steps, the framework could be extended using alternative optimizers (e.g. `nloptr`) or applied to real-world observational data. This work highlights the importance
+          of rigorous sensitivity analysis in validating causal claims in non-experimental settings.
+        </p>
+      </section>
+
+        
+    <section class="process" style="width: 60%; height: 100%; margin-bottom: 5%;">
+      <h3>Lab Presentation</h3>
+      <iframe style='border: 2px solid #000000;' src="../images/sensitivity.pdf" width="100%" height="400" title="Sensitivity Analysis"></iframe>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-tag"> Let's connect </p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.expandable');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.close');
+  
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightbox.style.display = 'block';
+          lightboxImg.src = img.src;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+  
+      close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+  
+      window.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+    const backToTopButton = document.getElementById('backToTop');
 
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.querySelectorAll('.expandable').forEach(img => {
+      img.addEventListener('click', () => {
+        const pdfSrc = img.getAttribute('data-pdf');
+        if (pdfSrc) {
+          const pdfOverlay = document.getElementById('pdfOverlay');
+          const pdfEmbed = document.getElementById('pdfEmbed');
+          pdfEmbed.src = pdfSrc + '#view=FitH';
+          pdfOverlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    document.querySelector('.pdf-close').addEventListener('click', () => {
+      document.getElementById('pdfOverlay').classList.add('hidden');
+      document.getElementById('pdfEmbed').src = '';
+      document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (e) => {
+      const overlay = document.getElementById('pdfOverlay');
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        document.getElementById('pdfEmbed').src = '';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+  </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" alt="Expanded image" />
+    </div>
   
 </body>
 </html>
