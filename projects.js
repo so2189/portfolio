@@ -58,14 +58,6 @@ let projCollection = [
     "link": "/projects/sensitivity.html"
   },
 
-  {
-    "itemTitle": "Self Reflection",
-    "category": "Creative",
-    "id": "6",
-    "image": "images/selfreflection.png",
-    "language": "p5js",
-    "link": "/projects/reflection.html"
-  },
 
   {
     "itemTitle": "405 Stuck in Cyberspace",
@@ -73,7 +65,16 @@ let projCollection = [
     "id": "7",
     "image": "images/cyberspace.png",
     "language": "p5js",
-    "link": "/projects/cyberspace.html"
+    "link": "https://openprocessing.org/sketch/2118488"
+  },
+
+  {
+    "itemTitle": "Self Reflection",
+    "category": "Creative",
+    "id": "6",
+    "image": "images/selfreflection.png",
+    "language": "p5js",
+    "link": "/projects/reflection.html"
   },
 
   // {
