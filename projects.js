@@ -65,7 +65,7 @@ let projCollection = [
     "id": "7",
     "image": "images/cyberspace.png",
     "language": "p5js",
-    "link": "https://openprocessing.org/sketch/2118488"
+    "link": "https://sanjidaorpi.github.io/405-Stuck-in-Cyberspace/"
   },
 
   {
