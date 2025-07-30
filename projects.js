@@ -96,15 +96,6 @@ let projCollection = [
   // },
 
   {
-    "itemTitle": "TandonStudy",
-    "category": "Fullstack",
-    "id": "10",
-    "image": "images/tandonstudy.png",
-    "language": "HTML/CSS",
-    "link": "/projects/tandon_study.html"
-  },
-
-  {
     "itemTitle": "Tic-Tac-Toe Game",
     "category": "Data",
     "id": "11",
