@@ -128,7 +128,7 @@ let projCollection = [
     "id": "15",
     "image": "images/breakout.jpg",
     "language": "p5js",
-    "link": "/projects/synth.html"
+    "link": "/projects/breakout.html"
   },
 
   {

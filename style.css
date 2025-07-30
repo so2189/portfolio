@@ -446,7 +446,14 @@ h1 {
   border-radius: 8px;
 }
 
-.hero-button:hover {
+.hero-button:focus {
+  outline: none;
+  background-color: black;
+  color: white;
+}
+
+.hero-button:focus-visible {
+  outline: 2px dashed #999;
   background-color: #444;
 }
 
