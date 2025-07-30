@@ -1,46 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Project by Sanjida Orpi</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../fx.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Number Line ML | Sanjida Orpi</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../fx.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
   <div class="container">
 
     <nav class="navbar">
-        <div class="name">Sanjida Orpi</div>
-		<svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
-			<defs>
-			  <path id="circle" d="M 100, 100
-					  m -75, 0
-					  a 75, 75 0 1, 0 150, 0
-					  a 75, 75 0 1, 0 -150, 0
-					  ">
-			  </path>
-			</defs>
-			<text width="400">
-			  <textPath alignment-baseline="top" xlink:href="#circle" class="text">
-				Sanjida Orpi ✧ Sanjida Orpi ✧ 
-			  </textPath>
-			</text>
-		</svg>
-		<div class="spinner"></div>
-        <div class="links">
-            <li><a href="../index.html">About</a></li>
-            <li><a href="../projects.html">Projects</a></li>
-        </div>
+      <div class="name"><a href="../index.html">Sanjida Orpi</a></div>
+      <svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+        <defs>
+          <path id="circle" d="M 100, 100 m -75, 0 a 75, 75 0 1, 0 150, 0 a 75, 75 0 1, 0 -150, 0"></path>
+        </defs>
+        <text width="400">
+          <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+            Sanjida Orpi ✧ Sanjida Orpi ✧ 
+          </textPath>
+        </text>
+      </svg>
+      <div class="spinner"></div>
+      <div class="links">
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+      </div>
     </nav>
 
-    <center><h3>Sorry, this page is currently under construction, thank you for your patience ◡̈</h3></center>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Number Line ML</h1>
+          <p>
+            An agent-based simulation and genetic algorithm optimization project where multiple agents traverse number lines probabilistically. The goal: evolve a strategy that minimizes the total movement variance before any agent reaches the goal.
+          </p>
+          <a href="https://github.com/so2189/Number-Line-ML/tree/main" target="_blank" class="hero-button">Visit Github</a>
+        </div>
+        <div class="hero-image">
+          <img src="../images/number_line.png" alt="Screenshot of project" />
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <div class="project-details">
+        <h2>Overview</h2>
+        <p>
+          In <strong>Number Line ML</strong>, four independent agents start at position 1 on separate number lines ranging from 1 to 10. The simulation evolves a strategy to decide which agent to move at each step using a genetic algorithm.
+        </p>
+
+        <h2>Game Rules</h2>
+        <ul>
+          <li>Each agent begins at position 1 on a 10-position number line.</li>
+          <li>At each time step, a single agent is chosen to move:</li>
+          <ul>
+            <li>If at position 1 → always move to position 2.</li>
+            <li>Otherwise → move left or right with 50% probability each.</li>
+          </ul>
+          <li>The game ends when any agent reaches position 10.</li>
+          <li>The score is the <strong>sum of squares</strong> of the number of moves each agent made. Lower scores are better.</li>
+        </ul>
+
+        <h2>Optimization Approach</h2>
+        <p>
+          A genetic algorithm is used to evolve agent-picking strategies. Policies are evaluated across simulations based on their final scores. The lower the score, the more balanced and efficient the strategy.
+        </p>
+
+        <h3>Core Components</h3>
+        <ul>
+          <li><strong>Environment:</strong> Simulates agents and number lines.</li>
+          <li><strong>State Encoding:</strong> Combines current position and number of moves into a state.</li>
+          <li><strong>Policy:</strong> Maps states to action values using a lookup table with random initialization.</li>
+          <li><strong>Evaluation:</strong> Repeated simulation to calculate average performance.</li>
+          <li><strong>Genetic Operators:</strong> Mutation and crossover drive exploration and refinement.</li>
+        </ul>
+
+        <h2>Outcomes</h2>
+        <ul>
+          <li>Clear learning trajectory visible through decreased fitness scores over generations.</li>
+          <li>Strategic agent selection emerges naturally from policy evolution.</li>
+          <li>Successfully balances fairness (equal agent movement) with goal completion efficiency.</li>
+        </ul>
+
+        <h2>Potential Extensions</h2>
+        <ul>
+          <li>Extend to more agents or longer number lines.</li>
+          <li>Apply reinforcement learning with Q-learning or policy gradients.</li>
+          <li>Introduce stochastic reward systems or penalties to increase complexity.</li>
+        </ul>
+      </div>
+
+      <aside class="project-sidebar">
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>✦&nbsp;&nbsp;R</li>
+          <li>✦&nbsp;&nbsp;Base plotting for visualization</li>
+          <li>✦&nbsp;&nbsp;Functional programming patterns</li>
+        </ul>
+
+        <h3>Keywords</h3>
+        <ul>
+          <li>Reinforcement Learning</li>
+          <li>Genetic Algorithm</li>
+          <li>Simulation</li>
+          <li>Exploration vs. Exploitation</li>
+        </ul>
+      </aside>
+    </section>
+
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <footer class="footer">
+      <p class="footer-tag">Let's connect</p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
 
   </div>
 
-
-  
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>

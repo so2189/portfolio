@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motivational Bookshelf | Sanjida Orpi</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../fx.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="name"><a href="../index.html">Sanjida Orpi</a></div>
+      <svg class="logo" id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+        <defs>
+          <path id="circle" d="M 100, 100 m -75, 0 a 75, 75 0 1, 0 150, 0 a 75, 75 0 1, 0 -150, 0"></path>
+        </defs>
+        <text width="400">
+          <textPath alignment-baseline="top" xlink:href="#circle" class="text">Sanjida Orpi ✧ Sanjida Orpi ✧</textPath>
+        </text>
+      </svg>
+      <div class="spinner"></div>
+      <div class="links">
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Motivational Bookshelf</h1>
+          <p>A collaborative creative physical computing and fabrication project that encpurages reading. uses weight sensors and servo motors to reveal hidden flower elements based on book placement.</p>
+        </div>
+        <div class="hero-image">
+          <img src="../images/bookshelf_banner.png" alt="Bookshelf prototype" />
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <div class="project-details">
+        <h2>Team Members</h2>
+        <p>Christina Woo, Sanjida Orpi, Jenesis Blancaflor, Isabella Menshouse, KJ Moses, Sabria Islam</p>
+
+        <h2>Overview</h2>
+        <p>Motivational Bookshelf integrates sensors, servo motors, and a custom-designed wooden structure to transform the act of placing books into an interactive, uplifting experience. When a book is placed, flowers rise from the shelf to visually reward the action.</p>
+
+        <h2>Development Timeline</h2>
+        <ul>
+          <li><strong>Week 1–2:</strong> Planning and initial sensor/gear exploration, rack-and-pinion design</li>
+          <li><strong>Week 3–4:</strong> Prototyping gear and rail, calibrating weight sensors with HX711 modules</li>
+          <li><strong>Week 5–6:</strong> Testing servo motor integration with sensor input, refining laser-cut pieces</li>
+          <li><strong>Week 7–8:</strong> Final assembly, redesign for support and stability, acrylic flower construction</li>
+          <li><strong>Spring 2025:</strong> Completed the full acrylic box structure and began servo testing via button inputs</li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+          <li>✦ Weight-sensor based flower activation</li>
+          <li>✦ Custom laser-cut gear and rail mechanism</li>
+          <li>✦ Servo-controlled flower movements (up/down)</li>
+          <li>✦ Adjustable acrylic stabilizers for flower stems</li>
+          <li>✦ Modular design for future scaling</li>
+        </ul>
+
+        <h2>In Progress</h2>
+        <p>We continue to iterate on flower support structure, fine-tune the motor-to-sensor code, and finalize user-trigger mechanisms. The final version will allow books placed on specific sections of the shelf to trigger servo-driven blooms.</p>
+
+        <h2>Tools & Technologies</h2>
+        <ul>
+          <li>✦ Arduino & HX711</li>
+          <li>✦ Laser Cutting (wood & acrylic)</li>
+          <li>✦ Illustrator (raster/vector files)</li>
+          <li>✦ Servo Motors, Load Cells</li>
+          <li>✦ Soldering & Assembly</li>
+        </ul>
+
+        <h2>Documentation</h2>
+        <p>Code, progress photos, and circuit diagrams are available in the shared Google Drive. Videos linked show servo-motor powered flower motion. Calibration challenges with sensors are still being worked through.</p>
+      </div>
+    </section>
+
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <footer class="footer">
+      <p class="footer-tag">Let's connect</p>
+      <hr />
+      <div id="connect_button">
+        <button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+        <button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+        <button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1TrsjW7XBFl30SiQjsXh-TmGHfjE1Z1r0/view?usp=sharing', '_blank')">Resume</button>
+      </div>
+      <hr />
+      <p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backToTopButton = document.getElementById('backToTop');
+
+      window.onscroll = function () {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -103,15 +103,6 @@ let projCollection = [
     "language": "R",
     "link": "/projects/tictactoe.html"
   },
-
-  {
-    "itemTitle": "Galton Board Simulation",
-    "category": "Data",
-    "id": "12",
-    "image": "images/galton_board.jpg",
-    "language": "R",
-    "link": "/projects/galton_board.html"
-  },
   
   {
     "itemTitle": "Number Line ML Model",
@@ -182,7 +173,7 @@ let projCollection = [
     "id": "20",
     "image": "images/bookshelf.png",
     "language": "Arduino",
-    "link": "/projects/synth.html"
+    "link": "/projects/bookshelf.html"
   },
 
   {
