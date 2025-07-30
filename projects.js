@@ -69,12 +69,12 @@ let projCollection = [
   },
 
   {
-    "itemTitle": "Self Reflection",
+    "itemTitle": "In My Reflection",
     "category": "Creative",
     "id": "6",
     "image": "images/selfreflection.png",
     "language": "p5js",
-    "link": "/projects/reflection.html"
+    "link": "https://sanjidaorpi.github.io/In-My-Reflection/"
   },
 
   // {
