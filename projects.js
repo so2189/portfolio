@@ -22,14 +22,6 @@ let projCollection = [
     "link": "/projects/winfra.html"
   },
 
-    {
-    "itemTitle": "Java Kahoot",
-    "category": "Fulstack",
-    "id": "23",
-    "image": "images/java_kahoot.png",
-    "language": "Java",
-    "link": "/projects/java_kahoot.html"
-  },
 
   {
     "itemTitle": "Fullourish",
@@ -38,6 +30,15 @@ let projCollection = [
     "image": "images/fullourish.png",
     "language": "API, JS, HTML/CSS",
     "link": "/projects/fullourish.html"
+  },
+
+  {
+    "itemTitle": "Java Kahoot",
+    "category": "Fulstack",
+    "id": "23",
+    "image": "images/java_kahoot.png",
+    "language": "Java",
+    "link": "/projects/java_kahoot.html"
   },
 
   {
@@ -50,20 +51,28 @@ let projCollection = [
   },
 
   {
+    "itemTitle": "OZIBA Design Site",
+    "category": "Fullstack",
+    "id": "5",
+    "image": "images/oziba.png",
+    "language": "HTML/CSS, JS",
+    "link": "https://sanjidaorpi.github.io/OZIBA-Design-Collective/"
+  },
+
+  {
     "itemTitle": "Inverse Probability Weighting, Sensitivity Analysis",
     "category": "Data",
-    "id": "5",
+    "id": "6",
     "image": "images/sensitivity_analysis.png",
     "language": "R",
     "link": "/projects/sensitivity.html"
   },
 
-
   {
-    "itemTitle": "405 Stuck in Cyberspace",
+    "itemTitle": "403 Stuck in Cyberspace",
     "category": "Creative",
     "id": "7",
-    "image": "images/cyberspace.png",
+    "image": "images/403.png",
     "language": "p5js",
     "link": "https://sanjidaorpi.github.io/405-Stuck-in-Cyberspace/"
   },
@@ -71,7 +80,7 @@ let projCollection = [
   {
     "itemTitle": "In My Reflection",
     "category": "Creative",
-    "id": "6",
+    "id": "8",
     "image": "images/selfreflection.png",
     "language": "p5js",
     "link": "https://sanjidaorpi.github.io/In-My-Reflection/"
@@ -99,7 +108,7 @@ let projCollection = [
     "itemTitle": "Tic-Tac-Toe Game",
     "category": "Data",
     "id": "11",
-    "image": "images/tic_tac_toe.png",
+    "image": "images/ttt.png",
     "language": "R",
     "link": "/projects/tictactoe.html"
   },
@@ -108,25 +117,16 @@ let projCollection = [
     "itemTitle": "Number Line ML Model",
     "category": "Data",
     "id": "13",
-    "image": "images/number_line.jpg",
+    "image": "images/numberline.png",
     "language": "R",
     "link": "/projects/number_ml.html"
-  },
-
-  {
-    "itemTitle": "Audio Synthesizer and Reactive Visualizer",
-    "category": "Creative",
-    "id": "14",
-    "image": "images/audio_vis.jpg",
-    "language": "Max",
-    "link": "/projects/synth.html"
   },
 
   {
     "itemTitle": "Breakout Game",
     "category": "Game Dev",
     "id": "15",
-    "image": "images/breakout.jpg",
+    "image": "images/breakout.png",
     "language": "p5js",
     "link": "/projects/breakout.html"
   },

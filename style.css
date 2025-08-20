@@ -270,10 +270,6 @@ h1 {
   color: darkgray;
 }
 
-#outputGrid>a:hover {
-  color: navy;
-}
-
 .previewTitle {
   color: black;
   font-size: larger;
@@ -282,10 +278,10 @@ h1 {
 
 .thumbnail {
   width: 100%;
-  height: 45vh;
+  aspect-ratio: 1 / 1; /* force square */
   object-fit: cover;
   border-radius: 3px;
-  display: flex;
+  display: block;
 }
 
 #connect_button {
