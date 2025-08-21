@@ -124,73 +124,82 @@ let projCollection = [
 
   {
     "itemTitle": "Breakout Game",
-    "category": "Game Dev",
+    "category": "Creative",
     "id": "15",
     "image": "images/breakout.png",
     "language": "p5js",
     "link": "/projects/breakout.html"
   },
 
+  // {
+  //   "itemTitle": "CWAZY CUPCAKES",
+  //   "category": "Creative",
+  //   "id": "17",
+  //   "image": "images/cupcakes.png",
+  //   "language": "p5js",
+  //   "link": "/projects/synth.html"
+  // },
+
+  // {
+  //   "itemTitle": "FruitDrop Game",
+  //   "category": "Game Dev",
+  //   "id": "18",
+  //   "image": "images/fruitdrop.jpg",
+  //   "language": "p5js",
+  //   "link": "/projects/synth.html"
+  // },
+
+  // {
+  //   "itemTitle": "Carrot Catcher",
+  //   "category": "Game Dev",
+  //   "id": "19",
+  //   "image": "images/carrotcatcher.png",
+  //   "language": "GML",
+  //   "link": "/projects/synth.html"
+  // },
+
+  {
+    "itemTitle": "Motivational Bookshelf",
+    "category": "Creative",
+    "id": "20",
+    "image": "images/motiv_bookshelf.png",
+    "language": "Arduino",
+    "link": "/projects/bookshelf.html"
+  },
+
   {
     "itemTitle": "Fish Frenzy",
-    "category": "Game Dev",
+    "category": "Creative",
     "id": "16",
     "image": "images/fishfrenzy.png",
     "language": "p5js",
     "link": "/projects/synth.html"
   },
 
-  {
-    "itemTitle": "CWAZY CUPCAKES",
-    "category": "Creative",
-    "id": "17",
-    "image": "images/cupcakes.png",
-    "language": "p5js",
-    "link": "/projects/synth.html"
-  },
-
-  {
-    "itemTitle": "FruitDrop Game",
-    "category": "Game Dev",
-    "id": "18",
-    "image": "images/fruitdrop.jpg",
-    "language": "p5js",
-    "link": "/projects/synth.html"
-  },
-
-  {
-    "itemTitle": "Carrot Catcher",
-    "category": "Game Dev",
-    "id": "19",
-    "image": "images/carrotcatcher.png",
-    "language": "GML",
-    "link": "/projects/synth.html"
-  },
-
-  {
-    "itemTitle": "Motivational Bookshelf",
-    "category": "Creative",
-    "id": "20",
-    "image": "images/bookshelf.png",
-    "language": "Arduino",
-    "link": "/projects/bookshelf.html"
-  },
-
-  {
-    "itemTitle": "Interactive STEM Mural",
-    "category": "Creative",
-    "id": "21",
-    "image": "images/mural.jpeg",
-    "language": "C",
-    "link": "/projects/synth.html"
-  },
+  // {
+  //   "itemTitle": "Interactive STEM Mural",
+  //   "category": "Creative",
+  //   "id": "21",
+  //   "image": "images/mural.jpeg",
+  //   "language": "C",
+  //   "link": "/projects/synth.html"
+  // },
 
   {
     "itemTitle": "Paw Pals",
-    "category": "Game Dev",
+    "category": "Creative",
     "id": "22",
     "image": "images/pawpals.png",
     "language": "GML",
+    "link": "/projects/synth.html"
+  },
+
+  {
+    "itemTitle": "Dog bites",
+    "category": "Data",
+    "id": "25",
+    "image": "images/dog_bites.png",
+    "language": "Unity",
     "link": "/projects/synth.html"
   },
 
@@ -212,23 +221,14 @@ let projCollection = [
     "link": "https://drive.google.com/file/d/1v6jDtDsMvJ1cNu2HIKDASsBkDTbPJT-J/view?usp=sharing"
   },
 
-  {
-    "itemTitle": "Projection Mapping",
-    "category": "Data",
-    "id": "24",
-    "image": "images/projection.png",
-    "language": "p5js",
-    "link": "/projects/synth.html"
-  },
-
-  {
-    "itemTitle": "Dog bites",
-    "category": "Data",
-    "id": "25",
-    "image": "images/dog_bites.png",
-    "language": "Unity",
-    "link": "/projects/synth.html"
-  },
+  // {
+  //   "itemTitle": "Projection Mapping",
+  //   "category": "Data",
+  //   "id": "24",
+  //   "image": "images/projection.png",
+  //   "language": "p5js",
+  //   "link": "/projects/synth.html"
+  // },
 
   {
     "itemTitle": "Nescatfe",
