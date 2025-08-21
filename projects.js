@@ -245,9 +245,26 @@ let projCollection = [
 function filterSelection(category) {
   outputGridElement.innerHTML = "";
 
+  let projectCount = 0;
   for (let i = 0; i < projCollection.length; i++) {
     if (category === 'all' || projCollection[i]["category"] === category) {
       createProjectPreview(projCollection[i]);
+      projectCount++;
+    }
+  }
+  
+  // Adjust spacing based on number of projects
+  const gridLayout = document.querySelector('.gridLayout');
+  if (gridLayout) {
+    if (projectCount <= 3) {
+      gridLayout.style.marginBottom = '2%';
+      gridLayout.style.paddingBottom = '2%';
+    } else if (projectCount <= 6) {
+      gridLayout.style.marginBottom = '4%';
+      gridLayout.style.paddingBottom = '4%';
+    } else {
+      gridLayout.style.marginBottom = '6%';
+      gridLayout.style.paddingBottom = '6%';
     }
   }
 }
@@ -264,9 +281,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (urlSection != "item") {
 
+    let projectCount = 0;
     for (let i = 0; i < projCollection.length; i++) {
       if (projCollection[i]["category"] == urlSection || urlSection == "" || urlSection == null) {
         createProjectPreview(projCollection[i]);
+        projectCount++;
+      }
+    }
+    
+    // Set initial spacing based on number of projects
+    const gridLayout = document.querySelector('.gridLayout');
+    if (gridLayout) {
+      if (projectCount <= 3) {
+        gridLayout.style.marginBottom = '2%';
+        gridLayout.style.paddingBottom = '2%';
+      } else if (projectCount <= 6) {
+        gridLayout.style.marginBottom = '4%';
+        gridLayout.style.paddingBottom = '4%';
+      } else {
+        gridLayout.style.marginBottom = '6%';
+        gridLayout.style.paddingBottom = '6%';
       }
     }
 
