@@ -65,18 +65,22 @@ ul {
 
 .wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 5;
 }
 
 .navbar {
+  background: white; /* remove opaque background */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  margin: 3%;
-  height: 70px;
-  position: relative;
-  flex-wrap: nowrap; 
+  height: 30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  flex-wrap: nowrap;
+  z-index: 100;
+  padding: 20px 5%;  /* adjust left/right space */
 }
 
 .navbar .name {
@@ -90,6 +94,24 @@ ul {
   height: 9vw;
   margin: 0 auto;
   justify-content: center;
+  z-index: 1000;
+  position: relative;
+}
+
+/* Spinner component */
+.navbar .spinner {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #333;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .links {
@@ -135,12 +157,13 @@ a:focus {
 }
 
 body {
-  cursor: url("cursor.png"), auto;
   background-color: transparent;
   font-family: 'font2';
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -225,6 +248,7 @@ h1 {
 .project p {
   font-size: min(5vw, 10em);
   font-family: 'font2', sans-serif;
+  margin-top: 10%;
 }
 
 .myBtnContainer {
@@ -391,11 +415,179 @@ h1 {
   }
 }
 
+/* Flowers background */
+.hero-background {
+  position: absolute;       /* stay in viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400vh;         /* always full hero height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  pointer-events: none;  /* don't block clicks */
+}
 
-/* Porfolio project pages outline */
+/* Hero wrapper */
+.hero-wrapper {
+  position: relative;
+  height: 400vh;          /* enough height for scroll effect */
+  z-index: 1;             /* above background */
+}
+
+/* Hero card */
 .hero {
-  padding: 5% 3%;
-  background-color: #f8f8f8;
+  position: sticky;       /* can keep sticky if you want scroll effect */
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;             /* above background */
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-evenly; /* spread columns evenly */
+  flex-wrap: wrap; /* wrap on smaller screens */
+  margin: 1rem 0;
+}
+
+.col {
+  flex: 1 1 150px; /* min width 150px per column, grow if space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.col pre.ascii-flower {
+  margin: 0;
+  text-align: center;
+  font-family: monospace;
+  line-height: 0.8rem;
+  font-size: clamp(0.5rem, 1.5vw, 1rem); /* scales with screen */
+  transition: transform 0.3s ease; /* for scroll effects */
+  white-space: pre; /* preserve spacing exactly */
+}
+.hero-background pre {
+  font-family: monospace;
+  font-size: 0.7rem;   /* adjust size if needed */
+  line-height: 0.7rem; /* keep ASCII aspect ratio */
+  white-space: pre;     /* preserve spacing */
+  margin: 0;
+  text-align: center;
+}
+
+.hero-background pre.ascii-flower {
+  font-family: monospace;
+  font-size: clamp(1.5rem, 5vw, 4rem); /* scales large and responsively */
+  line-height: 0.8;  /* tight line spacing */
+  white-space: pre;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.hero.lift {
+  transform: translateY(-15vh); /* lift distance */
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+.hero-name {
+  font-family: 'Arial', sans-serif;
+  font-size: clamp(3rem, 12vw, 16rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0 2rem;
+  color: #000;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  word-spacing: clamp(2rem, 8vw, 8rem);
+  max-width: calc(100% - 4rem);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Responsive word spacing for different screen sizes */
+@media (max-width: 1200px) {
+  .hero-name {
+    word-spacing: clamp(1.5rem, 7vw, 6rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    word-spacing: clamp(1rem, 6vw, 4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    word-spacing: clamp(0.5rem, 4vw, 2rem);
+  }
+}
+
+/* Title divs with vertical stacked spans */
+.title-1,
+.title-2,
+.title-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin: 0;
+  text-wrap: nowrap;
+}
+
+.title-1 span,
+.title-2 span,
+.title-3 span {
+  font-family: 'font3', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-align: left;
+  line-height: 0.8;
+}
+
+.title-1 span {
+  margin-left: 40%;
+}
+
+.title-2 span {
+  margin-left: 10%;
+}
+
+.title-3 span {
+  margin-left: 20%;
+}
+
+.title-2-container {
+  position: relative;
+  width: 100%;
+  overflow: visible; /* allow repeated text to overflow */
+}
+
+.repeats span {
+  font-family: 'font3', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 400; /* match titles */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.8; /* match titles */
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-content {
@@ -406,7 +598,6 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-
 }
 
 .hero-text {
@@ -734,3 +925,140 @@ h1 {
 .presentation {
   margin-top: 20%;
 }
+
+/* About Section - Magazine Style */
+.about-magazine {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  padding-top: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 200px 20px 100px; /* top padding for hero lift */
+  background: #ffffff;
+  z-index: 1;
+}
+
+.about-magazine-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  text-align: center;
+  font-family: 'font2', sans-serif;
+}
+
+.about-left {
+  text-align: right;
+}
+
+.about-right {
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.about-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-number {
+  font-size: 2rem;
+  font-family: 'headerFont', sans-serif;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.hero-background,
+#canvas-container {
+  pointer-events: none; /* clicks pass through */
+}
+.ascii-flower {
+  pointer-events: auto; /* only clickable if you want */
+}
+
+.about-cta {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-cta a {
+  text-decoration: none;
+  border-bottom: 2px solid #333;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.about-cta a:hover {
+  color: #666;
+  border-bottom: 2px solid #666;
+}
+
+/* Responsive Design for Magazine Layout */
+@media (max-width: 900px) {
+  .about-magazine-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left, .about-right {
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-magazine {
+    padding: 2rem 1rem;
+  }
+  
+  .about-magazine-content {
+    gap: 2rem;
+  }
+  
+  .about-number {
+    font-size: 1.5rem;
+  }
+  
+  .about-title {
+    font-size: 1.2rem;
+  }
+  
+  .about-description {
+    font-size: 0.9rem;
+  }
+}
+
