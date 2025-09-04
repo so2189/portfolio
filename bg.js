@@ -158,6 +158,7 @@ let canvas;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight + 1500);
   canvas.parent('hero'); // attach to a div with id="hero"
+  
   canvas.elt.style.position = 'absolute';
   canvas.elt.style.top = '-30vh';
   canvas.elt.style.left = '0';

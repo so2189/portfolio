@@ -1,5 +1,3 @@
-<html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +23,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="hero-container">
 
 	<nav class="navbar">
 		<div class="name"><a href="../index.html">Sanjida Orpi</a></div>
@@ -51,9 +49,6 @@
 	</nav>
 
     <div class="wrapper">
-		<div id="canvas-container">
-		  <div id="p5Canvas"></div>
-		</div>
 	  
 		<!-- Hero Section -->
 		<div id="hero" class="hero-background">
@@ -61,7 +56,7 @@
 		  
 
 		<section class="hero-wrapper">
-			<div class="hero" id="heroCard">
+			<div class="home-hero" id="heroCard">
 			  <div class="title-1">
 				<span class="scrolling-word"></span>
 			  </div>
@@ -112,20 +107,19 @@
 			</div>
 		</div>
 	</section>
+  </div>
 
-	<footer class="footer">
-		<p class="footer-tag"> Let's connect </p>
-		<hr />
-		<div id="connect_button">
-			<button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
-			<button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
-			<button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1mopcJS1h1THcPXWdpuqPWcx07gqDCTRW/view?usp=sharing', '_blank')">Resume</button>
-		</div>
-		<hr />
-		<p style="color: rgb(181, 181, 181);">©2025 by Sanjida Orpi. All Copyrights Reserved</p>
-	</footer>
-	
-  </div> <!-- End of container -->
+  <footer id="footer" class="footer">
+	<div id="canvas-container"></div>
+	<hr />
+	<div id="connect_button">
+		<button class="contact-button" onclick="window.open('https://www.linkedin.com/in/sanjida-orpi/', '_blank')">LinkedIn</button>
+		<button class="contact-button" onclick="window.open('mailto:sanjidaorpi111@gmail.com')">Email</button>
+		<button class="contact-button" onclick="window.open('https://drive.google.com/file/d/1mopcJS1h1THcPXWdpuqPWcx07gqDCTRW/view?usp=sharing', '_blank')">Resume</button>
+	</div>
+	<hr />
+	<p>©2025 by Sanjida Orpi // All rights reserved.</p>
+</footer>
 
   <script>
 	class HeroScroller {
@@ -278,7 +272,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Generate multiple flowers
   const flowers = [];
-  const flowerCount = 10; // number of flowers
+  const flowerCount = 6; // number of flowers
 	// fade factor on scroll:
 
   for (let i = 0; i < flowerCount; i++) {
@@ -324,7 +318,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 });
-
 
 </script>
 	

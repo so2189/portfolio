@@ -5,13 +5,16 @@ function startCanvas() {
 
   myP5 = new p5((p) => {
     let ellipses = [];
-    const count = 10;
+    const count = 30;
 
     p.setup = () => {
       let canvas = p.createCanvas(p.windowWidth, p.windowHeight);
-      canvas.parent('canvas-container');
+      canvas.parent("canvas-container");
+
       p.colorMode(p.HSB);
-      p.noStroke();
+      p.fill(255); // white fill
+      p.stroke(0); // gray outline
+      p.strokeWeight(1);
 
       for (let n = 0; n < count; n++) {
         ellipses.push(makeEllipse(p));
@@ -33,31 +36,47 @@ function startCanvas() {
 
     function makeEllipse(p) {
       let diameter = p.map(p.windowWidth, 0, 2000, 10, 50);
+      const padding = diameter / 2;
+      const baseFill = p.color(255);
+      const baseStroke = p.color(0);
+
       return {
-        position: { x: p.random(p.width / 4, p.width / 2), y: p.random(p.height / 4, p.height) },
+        position: { 
+          x: p.random(padding, p.width - padding), 
+          y: p.random(padding, p.height - padding) 
+        },
         velocity: { x: p.random(-1, 1), y: p.random(-1, 1) },
         diameter: diameter,
-        fillColor: p.color(p.random(150, 250), p.random(150, 210), p.random(150, 220), 0.3),
         rotation: p.random(p.TWO_PI),
         rotationSpeed: p.random(-0.01, 0.01),
+        currentFill: baseFill,
+        currentStroke: baseStroke,
         move() {
           this.position.x += this.velocity.x;
           this.position.y += this.velocity.y;
           this.rotation += this.rotationSpeed;
         },
         draw() {
-          p.fill(this.fillColor);
-          let radius = 45;
+          const d = p.dist(p.mouseX, p.mouseY, this.position.x, this.position.y);
+          const hover = d < this.diameter;
+
+          const targetFill = hover ? baseStroke : baseFill;
+          const targetStroke = hover ? baseFill : baseStroke;
+          this.currentFill = p.lerpColor(this.currentFill, targetFill, 0.1);
+          this.currentStroke = p.lerpColor(this.currentStroke, targetStroke, 0.1);
+
           p.push();
           p.translate(this.position.x, this.position.y);
           p.rotate(this.rotation);
-          petal(0, 0, radius, p);
+          p.fill(this.currentFill);
+          p.stroke(this.currentStroke);
+          petal(0, 0, 45, p);
           p.pop();
         },
         checkBounds() {
-          if (this.position.x >= p.width - this.diameter / 0.5 || this.position.x <= this.diameter / 0.5)
+          if (this.position.x >= p.width - padding || this.position.x <= padding)
             this.velocity.x *= -1;
-          if (this.position.y >= p.height - this.diameter / 0.5 || this.position.y <= this.diameter / 0.5)
+          if (this.position.y >= p.height - padding || this.position.y <= padding)
             this.velocity.y *= -1;
         }
       };
