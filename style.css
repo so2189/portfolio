@@ -258,6 +258,12 @@ h1 {
   margin-top: 10%;
 }
 
+.project-details p,
+.project-details ul {
+  margin-bottom: 5%;
+}
+
+
 .myBtnContainer {
   overflow: hidden;
 }

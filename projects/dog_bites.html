@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Bites Visualization | Sanjida Orpi</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../fx.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="name"><a href="../index.html">Sanjida Orpi</a></div>
+      <div class="links">
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Dog Bites Visualization</h1>
+            <p>An interactive Unity visualization of NYC dog bite reports, letting players explore the data in 3D from a player perspective, with dogs representing bite incidents per zip code.</p>
+          </div>
+          <div class="hero-image">
+            <img src="../images/dog_bites_banner.png" alt="Dog Bites Visualization banner" />
+          </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-content">
+        <div class="project-details">
+          <h2>Overview</h2>
+          <p>
+            This project visualizes NYC dog bite data using Unity, allowing players to walk through and explore a 3D representation of bite incidents. 
+            Each dog prefab represents a reported bite, organized by zip code in Brooklyn for the year 2020. The visualization provides an immersive and interactive way to understand the distribution of incidents across the city.
+          </p>
+
+          <h2>Process & Features</h2>
+          <ul>
+            <li>✦ Used NYC Open Data DOHM Dog Bite dataset (Brooklyn, 2020, 551 reports)</li>
+            <li>✦ Created 3D dog prefabs to represent bite reports per zip code</li>
+            <li>✦ Implemented a player-controlled walkthrough with movement and jumping</li>
+            <li>✦ Organized huddles of dog prefabs on a grid without overlap</li>
+            <li>✦ Randomized rotation and positioning of dog objects within huddles</li>
+            <li>✦ Interactive data visualization designed for exploratory learning</li>
+            <li>✦ Future improvements: trigger animations, enhanced zip code visualization, Angry/Walking dog animations</li>
+          </ul>
+        </div>
+
+        <aside class="project-sidebar">
+          <h3>Tech Stack</h3>
+          <ul>
+            <li>✦&nbsp;&nbsp;Unity</li>
+            <li>✦&nbsp;&nbsp;C#</li>
+            <li>✦&nbsp;&nbsp;3D Models & Animations</li>
+            <li>✦&nbsp;&nbsp;Data Parsing & Prefab Instantiation</li>
+          </ul>
+        </aside>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="project-demo" style="text-align: center; margin: 4% 0;">
+        <h2>Demo Video</h2>
+        <video 
+            controls 
+            style="width: 100%; max-width: 720px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <source src="../images/dog_bites.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <!-- Footer -->
+    <footer class="simple-footer">
+      <p>©2025 by Sanjida Orpi // All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Back to top functionality
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paw Pals | Sanjida Orpi</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../fx.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="name"><a href="../index.html">Sanjida Orpi</a></div>
+        <div class="links">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Paw Pals</h1>
+            <p>A relaxing cat shelter simulator where the player completes daily tasks, collects points, and progresses through the story. Experience a peaceful, creative, and interactive game world.</p>
+          </div>
+          <div class="hero-image">
+            <img src="../images/pawpals_banner.png" alt="Screenshot of project" />
+          </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-content">
+        <div class="project-details">
+          <h2>Overview</h2>
+          <p>
+            Paw Pals is a charming single-player cat shelter simulator where players take on the role of a shelter manager. 
+            Complete daily tasks, care for cats, and earn points as the story unfolds in a calm and immersive gameplay experience designed to be both relaxing and engaging.
+          </p>
+
+          <h2>Features</h2>
+          <ul>
+            <li>✦ Peaceful, single-player cat shelter simulator</li>
+            <li>✦ Daily tasks and mini-goals with point collection</li>
+            <li>✦ Storyline progression with unlockable events</li>
+            <li>✦ Custom sprite sheets and artwork for cats, environments, and UI</li>
+            <li>✦ Point system tracking progress and rewards</li>
+            <li>✦ Audio effects and background music for immersion</li>
+            <li>✦ Intuitive page flow and gameplay mechanics</li>
+          </ul>
+        </div>
+
+        <aside class="project-sidebar">
+          <h3>Tech Stack</h3>
+          <ul>
+            <li>✦&nbsp;&nbsp;GML</li>
+            <li>✦&nbsp;&nbsp;Sprite Sheets & Artwork</li>
+            <li>✦&nbsp;&nbsp;Audio & Music Integration</li>
+          </ul>
+        </aside>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="project-screenshots" style="text-align: center; margin: 4% 0;">
+        <h2>Images</h2>
+        <div style="display: flex; justify-content: center; gap: 2%; flex-wrap: wrap; margin-top: 2%;">
+            <img src="../images/pawpals1.png" alt="Screenshot 1" style="width: 30%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" />
+            <img src="../images/pawpals2.png" alt="Screenshot 2" style="width: 30%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" />
+            <img src="../images/pawpals3.png" alt="Screenshot 3" style="width: 30%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);" />
+        </div>
+    </section>
+
+<!-- Demo Video Section -->
+<section class="project-demo" style="text-align: center; margin: 4% 0;">
+    <h2>Game Demo</h2>
+    <video 
+        controls 
+        autoplay 
+        loop 
+        muted
+        style="width: 100%; max-width: 720px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <source src="../images/paw_pals.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+    
+
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <!-- Footer -->
+    <footer class="simple-footer">
+      <p>©2025 by Sanjida Orpi // All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Back to top functionality
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

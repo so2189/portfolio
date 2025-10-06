@@ -83,7 +83,7 @@ let projCollection = [
     "id": "8",
     "image": "images/selfreflection.png",
     "language": "p5js",
-    "link": "https://sanjidaorpi.github.io/In-My-Reflection/"
+    "link": "/projects/in_my_reflection.html"
   },
 
   // {
@@ -167,14 +167,14 @@ let projCollection = [
     "link": "/projects/bookshelf.html"
   },
 
-  {
-    "itemTitle": "Fish Frenzy",
-    "category": "Creative",
-    "id": "16",
-    "image": "images/fishfrenzy.png",
-    "language": "p5js",
-    "link": "/projects/synth.html"
-  },
+  // {
+  //   "itemTitle": "Fish Frenzy",
+  //   "category": "Creative",
+  //   "id": "16",
+  //   "image": "images/fishfrenzy.png",
+  //   "language": "p5js",
+  //   "link": "/projects/fish_frenzy.html"
+  // },
 
   // {
   //   "itemTitle": "Interactive STEM Mural",
@@ -191,7 +191,7 @@ let projCollection = [
     "id": "22",
     "image": "images/pawpals.png",
     "language": "GML",
-    "link": "/projects/synth.html"
+    "link": "/projects/paw_pals.html"
   },
 
   {
@@ -200,7 +200,7 @@ let projCollection = [
     "id": "25",
     "image": "images/dog_bites.png",
     "language": "Unity",
-    "link": "/projects/synth.html"
+    "link": "/projects/dog_bites.html"
   },
 
   {

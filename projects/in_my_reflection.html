@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In My Reflection | Sanjida Orpi</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="name"><a href="../index.html">Sanjida Orpi</a></div>
+        <div class="links">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+        </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>In My Reflection</h1>
+          <p>
+            An interactive art installation created to promote
+            self-reflection through immersive audiovisual interaction. The project transforms a live camera feed into 
+            a pixelated, water-like reflection of the user and integrates voice-based responses into the experience using 
+            <b>p5.js</b> and <b>ml5.js</b> libraries. This audio-based reflective experience journals your vocal responses and was created for
+            a course called Interactive Computing with one partner. 
+          </p>
+          <a href="https://sanjidaorpi.github.io/In-My-Reflection/" target="_blank" class="hero-button">Visit Site</a>
+        </div>
+        <div class="hero-image">
+          <img src="../images/in_my_reflection.png" alt="Screenshot of Self Reflection Experience" />
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content">
+      <div class="project-details">
+        <h2>Overview</h2>
+        <p>
+          The <b>In My Reflection Experience</b> is an interactive artwork that uses water as a metaphor for introspection. 
+          Viewers are invited to verbally respond to a series of reflective questions while seeing their likeness mirrored 
+          in a dynamic, pixelated water surface. Their spoken words appear as rippling text within the reflection, 
+          symbolizing how thoughts and emotions shape one’s self-image.
+        </p>
+
+        <h2>Motivation</h2>
+        <p>
+          Inspired by the reflective qualities of water, our goal was to create an experience that visually represents 
+          personal reflection. We wanted users to see themselves—literally and figuratively—while responding to questions 
+          that promote mindfulness and self-awareness. The project combines computer vision, speech recognition, and 
+          generative art to create an experience that evolves with each participant.
+        </p>
+
+        <h2>Methods & Tools</h2>
+        <ul>
+          <li>✦ Pixelated video reflection using <code>createCapture()</code> and <b>pointillism</b></li>
+          <li>✦ Dynamic text effects via <code>textToPoints()</code> and <code>sin()</code> oscillation</li>
+          <li>✦ <b>ml5.js</b> <code>PoseNet</code> and <code>Body Segmentation</code> for real-time body tracking</li>
+          <li>✦ <b>p5.speech</b> library for audio recognition and speech-to-text</li>
+          <li>✦ Ripple effects and wave animation using Perlin noise and sine functions</li>
+        </ul>
+
+        <h2>Process & Updates</h2>
+
+        <p>
+          Early stages involved setting up the camera input and testing pixelation effects. We explored methods to visualize 
+          users’ reflections using pointillism and experimented with wave animations inspired by oscillating dot patterns. 
+          We also began integrating <b>ml5 PoseNet</b> for facial tracking and considered how to segment the user’s head and 
+          shoulders from the background.
+        </p>
+
+        <p>
+          The final experience features four reflective questions navigated via arrow buttons. Users activate the microphone 
+          to respond verbally, and their speech is transcribed and visualized as wave-like text around their reflection. 
+          <b>Body segmentation</b> masks non-body pixels, simulating a watery mirror. Text is positioned dynamically around 
+          the user’s face using <b>PoseNet</b> ear tracking. Additional enhancements include a ripple animation object that 
+          reacts to mouse presses and a start/end screen to introduce and conclude the experience.
+        </p>
+
+        <p>
+          Performance optimizations involved using alpha-mapped masks instead of multiple buffer layers to reduce lag. 
+          Future improvements include more precise facial mapping, transparent background segmentation, and additional question sets 
+          themed around personal, collective, and environmental reflection.
+        </p>
+
+        <h2>Individual Contributions</h2>
+        <p>
+          I developed the button and microphone interface for smooth question navigation, implemented oscillating text effects using 
+          <code>sin()</code>, and integrated <b>ml5 Body Pose</b> for ear-based tracking of user reflections. I optimized body 
+          segmentation by refining alpha masks and designed the HTML/CSS interface for the project. Additionally, I handled audio 
+          playback management and incorporated sound effects during save interactions.
+        </p>
+
+        <h2>Inspiration</h2>
+        <ul>
+          <li>✦ Alida Sun – Mirror and Somatic Art Projects</li>
+          <li>✦ <a href="https://youtu.be/MpDUW_bvihE" target="_blank">Oscillating Wave Pattern</a></li>
+          <li>✦ <a href="https://youtu.be/VyXxSNcgDtg" target="_blank">Physarum Simulation</a></li>
+          <li>✦ Tutorials by Dan Shiffman (<em>The Coding Train</em>)</li>
+        </ul>
+      </div>
+
+      <aside class="project-sidebar">
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>✦ p5.js</li>
+          <li>✦ ml5.js (PoseNet, Body Segmentation)</li>
+          <li>✦ p5.speech</li>
+          <li>✦ JavaScript (ES6)</li>
+          <li>✦ HTML / CSS</li>
+        </ul>
+
+        <h3>Core Features</h3>
+        <ul>
+          <li>✦ Real-time pixelated reflection via webcam</li>
+          <li>✦ Speech-to-text integration for user responses</li>
+          <li>✦ Ripple and oscillation water effects</li>
+          <li>✦ Body segmentation masking and ear tracking</li>
+          <li>✦ Start and end screens with save functionality</li>
+        </ul>
+      </aside>
+    </section>
+
+    <footer class="simple-footer">
+      <p>©2025 by Sanjida Orpi // All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
